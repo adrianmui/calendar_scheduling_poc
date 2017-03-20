@@ -21,8 +21,12 @@ app.get('/', function (req, res) {
 });
 
 //api
-app.get('/api/deployments', function(req, res) {
+app.get('/api/deployments', (req, res) => {
     res.sendFile(path.join(__dirname + '/data/deployments.json'));
+});
+
+app.get('/api/deployment/:depId', (req, res) => {
+    res.sendFile(path.join(__dirname + '/data/single/'+ req.params.depId +'.json'));
 });
  
 app.listen(3000);

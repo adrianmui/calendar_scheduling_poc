@@ -15,7 +15,7 @@ app.factory('DeploymentService', () => {
         return _deployments;
     };
 
-    stub.ajaxDeployments = () => {
+    stub.$ajaxGetDeployments = () => {
         return $.get("/api/deployments")
           .done((response) => {
             _deployments = response.Deployments;
