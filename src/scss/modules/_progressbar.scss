@@ -1,0 +1,19 @@
+.progress {
+    background-color: $color-light-dark;
+
+    &.progress-sm {
+        height: 10px;
+    }
+
+    &.progress-xs {
+        height: 5px;
+    }
+    &.progress-lg {
+        height: 30px;
+
+        .progress-bar {
+            line-height: 30px;
+        }
+    }
+
+}

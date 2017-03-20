@@ -1,0 +1,11 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - prod
+prod:
+  description: 'Production build'
+  tasks:
+    - 'clean:prod'
+    - 'less:prod'
+    - 'pleeease:prod'
+    - 'pleeease:prod-min'

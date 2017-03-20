@@ -1,0 +1,600 @@
+<!-- build:include layout/header.html --><!-- /build -->
+
+<div class="material-background"></div>
+
+<div class="container container-full">
+    <div class="ms-paper">
+        <div class="row">
+            <!-- build:componentsMenu component-horizontal-tabs.html --><!-- /build -->
+            <div class="col-md-9 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <h1>Horizontal Tabs</h1>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Basic tabs</h2>
+
+                        <div class="card">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs  shadow-2dp" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead1">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code1" aria-expanded="false" aria-controls="code1">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead1">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;div class=&quot;card&quot;&gt;
+    &lt;!-- Nav tabs --&gt;
+    &lt;ul class=&quot;nav nav-tabs  shadow-2dp&quot; role=&quot;tablist&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#home&quot; aria-controls=&quot;home&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#profile&quot; aria-controls=&quot;profile&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-account&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#messages&quot; aria-controls=&quot;messages&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-email&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#settings&quot; aria-controls=&quot;settings&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-settings&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Settings&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;!-- Tab panes --&gt;
+        &lt;div class=&quot;tab-content&quot;&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;home&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Full Width</h2>
+
+                        <div class="card">
+                            <ul class="nav nav-tabs nav-tabs-full nav-tabs-4 shadow-2dp" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home2" aria-controls="home2" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile2" aria-controls="profile2" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages2" aria-controls="messages2" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings2" aria-controls="settings2" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home2">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile2">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages2">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings2">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead2">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code2" aria-expanded="false" aria-controls="code2">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead2">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;div class=&quot;card&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-full nav-tabs-4 shadow-2dp&quot; role=&quot;tablist&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#home2&quot; aria-controls=&quot;home2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#profile2&quot; aria-controls=&quot;profile2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-account&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#messages2&quot; aria-controls=&quot;messages2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-email&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#settings2&quot; aria-controls=&quot;settings2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-settings&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Settings&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;div class=&quot;tab-content&quot;&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;home2&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile2&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages2&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings2&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Colors</h2>
+
+                        <div class="alert alert-info alert-light">
+                            <i class="zmdi zmdi-info"></i> Just some samples. Unlimited combinations.
+                        </div>
+
+                        <div class="card card-success">
+                            <ul class="nav nav-tabs nav-tabs-success nav-tabs-full nav-tabs-3 shadow-2dp" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home3" aria-controls="home3" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile3" aria-controls="profile3" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages3" aria-controls="messages3" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home3">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile3">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages3">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card card-warning">
+                            <ul class="nav nav-tabs nav-tabs-warning nav-tabs-full nav-tabs-5 shadow-2dp" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home4" aria-controls="home4" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile4" aria-controls="profile4" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages4" aria-controls="messages4" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings4" aria-controls="settings4" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#help4" aria-controls="help4" role="tab" data-toggle="tab"><i class="zmdi zmdi-help"></i> <span class="hidden-xs">Help</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home4">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile4">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages4">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings4">
+                                        <p>voluptatibus consectetur expedita labore Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab in alias optio, laudantium, tempore odio cum voluptatibus consectetur expedita labore vel aut facilis ipsum maiores officiis veniam neque ducimus. Ratione.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="help4">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere adipisci pariatur, veritatis quam sunt illum officiis ullam voluptatibus consectetur expedita labore consectetur cum minima alias. Aliquam id quod ipsam numquam laboriosam sed cupiditate ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <h3>Indicators Colors &amp; Flat Design</h3>
+
+                        <div class="card card-royal">
+                            <ul class="nav nav-tabs nav-tabs-royal indicator-warning" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home6" aria-controls="home6" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile6" aria-controls="profile6" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages6" aria-controls="messages6" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings6" aria-controls="settings6" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home6">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile6">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages6">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings6">
+                                        <p>voluptatibus consectetur expedita labore Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab in alias optio, laudantium, tempore odio cum voluptatibus consectetur expedita labore vel aut facilis ipsum maiores officiis veniam neque ducimus. Ratione.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card">
+                            <ul class="nav nav-tabs nav-tabs-danger nav-tabs-full nav-tabs-4 indicator-dark" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home5" aria-controls="home5" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile5" aria-controls="profile5" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages5" aria-controls="messages5" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings5" aria-controls="settings5" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home5">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile5">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages5">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings5">
+                                        <p>voluptatibus consectetur expedita labore Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab in alias optio, laudantium, tempore odio cum voluptatibus consectetur expedita labore vel aut facilis ipsum maiores officiis veniam neque ducimus. Ratione.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead3">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code3" aria-expanded="false" aria-controls="code3">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead3">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;div class=&quot;card card-success&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-success nav-tabs-full nav-tabs-3 shadow-2dp&quot; role=&quot;tablist&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#home3&quot; aria-controls=&quot;home3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#profile3&quot; aria-controls=&quot;profile3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-account&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#messages3&quot; aria-controls=&quot;messages3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-email&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;div class=&quot;tab-content&quot;&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;home3&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile3&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages3&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">White Tabs</h2>
+
+                        <div class="card card-flat">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-primary nav-tabs-full nav-tabs-4" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home7" aria-controls="home7" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile7" aria-controls="profile7" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages7" aria-controls="messages7" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings7" aria-controls="settings7" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block no-pl no-pr">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home7">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile7">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages7">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings7">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card card-primary">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-primary nav-tabs-full nav-tabs-4" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home8" aria-controls="home8" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile8" aria-controls="profile8" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages8" aria-controls="messages8" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings8" aria-controls="settings8" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home8">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile8">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages8">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings8">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead4">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code4" aria-expanded="false" aria-controls="code4">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead4">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;div class=&quot;card card-flat&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-transparent indicator-primary nav-tabs-full nav-tabs-4&quot; role=&quot;tablist&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#home7&quot; aria-controls=&quot;home7&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#profile7&quot; aria-controls=&quot;profile7&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-account&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#messages7&quot; aria-controls=&quot;messages7&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-email&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#settings7&quot; aria-controls=&quot;settings7&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-settings&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Settings&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;card-block no-pl no-pr&quot;&gt;
+        &lt;div class=&quot;tab-content&quot;&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;home7&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile7&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages7&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings7&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Withe Tabs with Colors</h2>
+
+                        <div class="card card-flat">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-info nav-tabs-full nav-tabs-4" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home9" aria-controls="home9" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile9" aria-controls="profile9" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages9" aria-controls="messages9" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings9" aria-controls="settings9" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block no-pl no-pr">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home9">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile9">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages9">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings9">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card card-danger">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-danger nav-tabs-full nav-tabs-4" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home10" aria-controls="home10" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile10" aria-controls="profile10" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages10" aria-controls="messages10" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings10" aria-controls="settings10" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home10">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile10">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages10">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings10">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card card-flat">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-royal nav-tabs-full nav-tabs-4" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home11" aria-controls="home11" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile11" aria-controls="profile11" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages11" aria-controls="messages11" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings11" aria-controls="settings11" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block no-pl no-pr">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home11">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile11">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages11">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings11">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="card">
+                            <ul class="nav nav-tabs nav-tabs-transparent indicator-warning" role="tablist">
+                                <li role="presentation" class="active"><a class="withoutripple" href="#home12" aria-controls="home12" role="tab" data-toggle="tab"><i class="zmdi zmdi-home"></i> <span class="hidden-xs">Home</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#profile12" aria-controls="profile12" role="tab" data-toggle="tab"><i class="zmdi zmdi-account"></i> <span class="hidden-xs">Profile</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#messages12" aria-controls="messages12" role="tab" data-toggle="tab"><i class="zmdi zmdi-email"></i> <span class="hidden-xs">Messages</span></a></li>
+                                <li role="presentation"><a class="withoutripple" href="#settings12" aria-controls="settings12" role="tab" data-toggle="tab"><i class="zmdi zmdi-settings"></i> <span class="hidden-xs">Settings</span></a></li>
+                            </ul>
+
+                            <div class="card-block">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade active in" id="home12">
+                                        <p>Curabitur tempus felis tortor, sit amet accumsan nisi posuere a. Etiam nulla lectus, luctus nec pulvinar ac, accumsan vitae tellus. Donec scelerisque sem sit amet lorem pulvinar suscipit. Pellentesque fermentum hendrerit sapien, luctus sagittis ante egestas vehicula. Praesentnec erat purus.</p>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis porttitor urna vel commodo. Sed a arcu eget justo ornare gravida. Etiam fermentum libero bibendum hendrerit ultrices. In a accumsan justo, quis pretium ex.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="profile12">
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat, nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+                                        <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="messages12">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium consectetur dolorum ex impedit et error sequi.</p>
+                                        <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam facere provident ullam voluptate voluptatibus architecto.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings12">
+                                        <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore perferendis ducimus voluptatibus ipsa.</p>
+                                        <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card -->
+
+                        <div class="alert alert-royal">The limit is your imagination.</div>
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead5">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code5" aria-expanded="false" aria-controls="code5">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead5">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;div class=&quot;card card-danger&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-transparent indicator-danger nav-tabs-full nav-tabs-4&quot; role=&quot;tablist&quot;&gt;
+        &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#home10&quot; aria-controls=&quot;home10&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-home&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#profile10&quot; aria-controls=&quot;profile10&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-account&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#messages10&quot; aria-controls=&quot;messages10&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-email&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Messages&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;&lt;a class=&quot;withoutripple&quot; href=&quot;#settings10&quot; aria-controls=&quot;settings10&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;zmdi zmdi-settings&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs&quot;&gt;Settings&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;card-block&quot;&gt;
+        &lt;div class=&quot;tab-content&quot;&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade active in&quot; id=&quot;home10&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile10&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages10&quot;&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings10&quot;&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+                </div> <!-- ms-paper-content -->
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+    </div> <!-- ms-paper -->
+</div> <!-- container -->
+
+<!-- build:include layout/footer.html --><!-- /build -->

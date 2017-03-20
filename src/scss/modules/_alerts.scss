@@ -1,0 +1,108 @@
+.alert {
+    //@include shadow-2dp();
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+
+    i {
+        margin-right: 10px;
+
+        &.zmdi {
+            font-size: 16px;
+        }
+    }
+
+    .close {
+        color: #fff;
+        opacity: .5;
+        border: 0;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 18px;
+        transition: all ease .3s;
+        margin: 5px 5px 0 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.alert-default {
+        background-color: $color-light-dark;
+        color: $color-dark;
+
+        .close {
+            color: $color-dark;
+        }
+    }
+
+    &.alert-black {
+        background-color: $color-dark;
+        color: $color-light;
+    }
+
+    &.alert-light {
+        background-color: $color-light-light;
+        color: $color-dark;
+        border-left: solid 4px darken($color-light, 25%);
+        border-right: solid 4px darken($color-light, 25%);
+
+        a {
+            color: $color-primary;
+
+            &:hover {
+                color: $color-primary-dark;
+            }
+        }
+
+        .close {
+            color: $color-dark;
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        &.alert-black {
+            border-color: #000;
+            color: #000;
+        }
+
+        &.alert-success {
+            border-color: $color-success;
+            color: darken($color-success, 10%);
+        }
+
+        &.alert-primary {
+            border-color: $color-primary;
+            color: darken($color-primary, 10%);
+        }
+
+        &.alert-warning {
+            border-color: $color-warning;
+            color: darken($color-warning, 10%);
+        }
+
+        &.alert-danger {
+            border-color: $color-danger;
+            color: darken($color-danger, 10%);
+        }
+
+        &.alert-royal {
+            border-color: $color-royal;
+            color: darken($color-royal, 10%);
+        }
+
+        &.alert-info {
+            border-color: $color-info;
+            color: darken($color-info, 10%);
+        }
+    }
+}
+
+.well {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24) !important;
+    background-color: $color-light-light !important;
+
+    &.well-sm {
+        font-size: 1.4rem;
+    }
+}

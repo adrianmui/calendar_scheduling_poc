@@ -1,0 +1,128 @@
+.label {
+    border-radius: 2px;
+    padding: 3px 6px;
+    vertical-align: middle;
+
+    &.label-default {
+        background-color: $color-alt;
+    }
+
+    &.pull-right {
+        margin-top: 5px;
+    }
+
+    &.label-white {
+        background-color: #fff;
+        color: $color-dark;
+    }
+}
+
+.active {
+    & > .label {
+        background-color: #fff;
+        color: $color-primary;
+    }
+}
+
+.badge {
+    background-color: $color-alt;
+    margin: 0 0 0 2px;
+    padding: 0 5px;
+    font-size: 11px;
+    font-weight: 400;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    transition: all ease 0.3s;
+
+    &.badge-square {
+        border-radius: 0;
+    }
+
+    &.badge-round {
+        border-radius: 5px;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &.badge-primary {
+        background-color: $color-primary;
+    }
+
+    &.badge-info {
+        background-color: $color-info;
+    }
+
+    &.badge-royal {
+        background-color: $color-royal;
+    }
+
+    &.badge-warning {
+        background-color: $color-warning;
+    }
+
+    &.badge-danger {
+        background-color: $color-danger;
+    }
+
+    &.badge-success {
+        background-color: $color-success;
+    }
+
+    &.badge-orange {
+        background-color: $mdc-orange-700;
+    }
+
+    &.badge-pink {
+        background-color: $mdc-pink-A400;
+    }
+}
+
+.btn-circle {
+    .badge {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.nav.nav-stacked {
+
+    .badge,
+    .label {
+        //margin-top: 5px;
+    }
+
+    li {
+        a {
+            color: $color-dark;
+
+            &:hover,
+            &:focus {
+                background-color: $color-light;
+                color: $color-primary;
+            }
+        }
+
+        &.active {
+            a {
+                color: #fff;
+                background-color: $color-primary;
+
+                .badge {
+                    color: $color-primary-dark;
+                    background-color: #fff;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: $color-primary-dark;
+                }
+            }
+        }
+    }
+}

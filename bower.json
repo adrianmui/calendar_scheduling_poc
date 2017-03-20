@@ -1,0 +1,56 @@
+{
+  "name": "material-style",
+  "description": "Bootstrap Material Style Template",
+  "main": "index.html",
+  "authors": [
+    "Adrián Guerra Marrero"
+  ],
+  "license": "SEE LICENSE IN license.txt",
+  "keywords": [
+    "Material",
+    "Design",
+    "Bootstrap",
+    "Template",
+    "Theme"
+  ],
+  "homepage": "https://github.com/adrigm/material-style",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "Slidebars": "slidebars#^0.10.3",
+    "holderjs": "^2.9.4",
+    "matchHeight": "^0.7.2",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0",
+    "material-design-iconic-font": "^2.2.0",
+    "material-design-typography": "^0.3.1",
+    "prism": "^1.6.0",
+    "prism-theme-one-dark": "^1.0.0",
+    "bootstrap-select": "^1.12.2",
+    "jquery.cookie": "jquery-cookie#^1.4.1",
+    "wow": "^1.1.2",
+    "Yamm3": "yamm3#^1.1.0",
+    "plyr": "^2.0.11",
+    "masonry": "^4.1.1",
+    "imagesloaded": "^4.1.1",
+    "jquery.counterup": "^2.1.0",
+    "chart.js": "^2.5.0",
+    "chartjs-plugin-deferred": "^0.2.0",
+    "circles": "*",
+    "owl.carousel": "^2.2.1",
+    "jquery.countdown": "^2.2.0",
+    "mixitup": "#2.1.11",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git",
+    "typed.js": "^1.1.4",
+    "snackbar": "^0.1.5"
+  }
+}

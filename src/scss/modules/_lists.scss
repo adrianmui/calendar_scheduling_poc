@@ -1,0 +1,88 @@
+.list-group {
+    border-left: solid 1px $color-light-dark;
+    border-right: solid 1px $color-light-dark;
+
+    .list-group-item,
+    a.list-group-item {
+        border: 0;
+        padding: 10px 15px;
+        margin: 0;
+        transition: all ease 0.3s;
+        border-bottom: solid 1px $color-light-dark;
+        vertical-align: middle;
+
+        & > .badge {
+            //margin-top: 5px;
+        }
+
+        &:first-child {
+            border-top: solid 1px $color-light-dark;
+        }
+
+        & > i {
+            margin-right: 1.5rem;
+        }
+    }
+
+    a.list-group-item {
+        &:hover,
+        &:focus {
+            color: $color-primary;
+            background-color: $color-light;
+        }
+
+        &.active {
+            background-color: $color-primary;
+            color: #fff;
+            border-color: $color-primary;
+
+            &:hover,
+            &:focus {
+                background-color: $color-primary-dark;
+            }
+        }
+    }
+}
+
+.ms-media-list {
+    .media-object {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: solid 2px #fff;
+        @include shadow-2dp;
+        margin-bottom: 1rem;
+    }
+}
+
+.list-line {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+
+        a {
+            display: block;
+            color: $color-dark;
+            padding: 10px 0;
+            border-bottom: dotted 1px $color-medium-light;
+            transition: all ease 0.3s;
+            padding-left: 10px;
+
+            &:hover,
+            &:focus {
+                background-color: $color-light;
+                color: $color-primary;
+            }
+
+        }
+
+        &:first-child {
+            a {
+                border-top: dotted 1px $color-medium-light;
+            }
+        }
+    }
+}

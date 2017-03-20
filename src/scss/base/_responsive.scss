@@ -1,0 +1,212 @@
+@media (max-width: 1199px) {
+    .ms-navbar {
+        .navbar-brand {
+            padding-right: 0px;
+        }
+
+        .navbar-nav {
+
+            li  {
+                a {
+                    padding: 15px 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .ms-header {
+        .header-right {
+            .search-container {
+                display: none;
+            }
+        }
+    }
+
+    .ms-navbar {
+        .navbar-brand {
+            padding-right: 0px;
+        }
+
+        .navbar-nav {
+
+            li  {
+                font-size: 1.4rem;
+                a {
+                    padding: 15px 15px;
+                }
+            }
+        }
+
+    }
+
+    .ms-paper {
+        animation-name: shadow-retard, slideInUpTiny;
+        animation-duration: 5s, 1.4s;
+
+        & > .row {
+            overflow: hidden;
+
+            & > [class*="col-"]{
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .ms-paper-menu-left-container {
+                padding-right: 15px;
+                animation-name: slideInUp;
+
+                .ms-paper-menu-left  {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+
+                    .ms-paper-menu-title {
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ms-paper-content-container {
+            padding-left: 15px !important;
+
+
+            .ms-paper-content {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .typed-block {
+        display: block;
+
+        &:after {
+            content: ".";
+
+        }
+
+        & + .typed-cursor {
+            display: none;
+        }
+    }
+
+    .container-full {
+        padding: 0px;
+    }
+
+    .center-block-xs {
+        display: table;
+        float: none !important;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .btn-navbar-menu {
+        display: block;
+        right: 0px !important;
+    }
+
+    .ms-paper {
+        margin-top: -40px;
+
+        & > .row {
+            margin: 0;
+            & > [class*="col-"]{
+                margin-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .ms-paper-menu-left-container,
+            .ms-paper-content-container {
+                padding-left: 0 !important;
+            }
+
+            .ms-paper-menu-left-container {
+                .ms-paper-menu-left  {
+                    .ms-paper-menu-title {
+                        background-color: darken($color-primary, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .ms-header {
+        display: none;
+    }
+
+    .ms-navbar {
+        .container {
+            .navbar-header {
+                display: inline-block;
+
+                .navbar-brand {
+                    display: inline-block;
+                    margin-left: 20px;
+                    padding-top: 10px;
+                }
+            }
+
+            .navbar-collapse {
+                display: none !important;
+            }
+
+            .btn-navbar-menu {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .ms-paper-menu-title {
+        text-align: left !important;
+        padding-left: 3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ms-paper-menu-title {
+        a {
+            i {
+                right: 3rem !important;
+            }
+        }
+    }
+
+    .navbar-brand {
+        .ms-title {
+            display: none;
+        }
+    }
+
+    .ms-margin {
+        a {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .panel-menu {
+        display: block;
+    }
+
+    .navbar-brand {
+        .ms-title {
+            display: inline;
+        }
+    }
+
+    .no-mt-md {
+        margin-top: 0;
+    }
+}

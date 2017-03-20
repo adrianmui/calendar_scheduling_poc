@@ -1,0 +1,103 @@
+.ms-collapse {
+    .panel {
+        border-radius: 0px;
+
+        .panel-heading {
+            padding: 0;
+            border-radius: 0px;
+
+            .panel-title {
+                a {
+                    display: block;
+                    color: $color-dark;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1rem;
+                    padding: 1.4rem 1.5rem;
+                    position: relative;
+
+                    i {
+                        font-size: 1.6rem;
+                        margin-right: 1rem;
+                        //background-color: #f00;
+                        transition: all ease 0.4s;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        right: 2.5rem;
+                        top: 1.7rem;
+                        font-family: 'FontAwesome';
+                        content: "\f107";
+                        transform: rotate(0);
+                        transition: all ease 0.4s;
+                    }
+                }
+
+                a.collapsed {
+                    i {
+                        //transform: rotate(180deg);
+                    }
+                    &:after {
+                        //content: "\f104";
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &.ms-rotate-icon {
+                    a.collapsed {
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @each $n, $c in $color-list {
+        .panel-#{$n} {
+            .panel-heading {
+                padding: 0;
+                background-color: $c;
+
+                .panel-title {
+                    a {
+                        display: block;
+                        color: #fff !important;
+                    }
+                }
+            }
+
+            .panel-collapse {
+                .panel-body {
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    &.no-margin {
+        .panel {
+            border-radius: 2px;
+            margin: 0 !important;
+        }
+    }
+}
+
+.card {
+    .ms-collapse {
+        margin: 0;
+
+        .panel {
+            box-shadow: none;
+        }
+    }
+}

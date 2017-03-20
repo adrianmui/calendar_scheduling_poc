@@ -1,0 +1,136 @@
+.checkbox {
+    label {
+        margin-right: 2rem;
+
+        .checkbox-material {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.bootstrap-select {
+    .dropdown-toggle:focus {
+      outline: none !important;
+      background-color: transparent;
+    }
+
+    button {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .dropdown-menu {
+        top: 0;
+        padding: 0;
+
+        ul {
+            li {
+                a {
+                    padding: 1rem 2rem;
+                    transition: all ease 0.5s;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: $color-light-dark;
+                        color: #000;
+                    }
+                }
+
+                &.selected {
+                    a {
+                        background-color: $color-light-dark;
+                        color: #000;
+
+                        .check-mark {
+                            display: none !important;
+                        }
+
+                        &:after {
+                            content: '\f26b';
+                            font-family: 'Material-Design-Iconic-Font';
+                            text-align: right;
+                            display: inline-block;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    .input-group-addon {
+        padding-left: 2px;
+        i {
+            font-size: 18px;
+        }
+    }
+
+    label {
+        color: $color-medium-dark !important;
+
+    }
+    &.is-focused {
+        .radio {
+
+            label {
+                //color: #f00 !important;
+                transition: all ease .3s;
+
+                &:hover,
+                &:focus {
+                    color: $color-dark-light !important;
+                }
+            }
+        }
+    }
+}
+
+.form-inverse {
+    .radio {
+        label {
+            span {
+                border-color: $color-light;
+            }
+        }
+    }
+
+
+
+    input[type=checkbox] {
+        & + .checkbox-material {
+            .check {
+                border-color: $color-light;
+            }
+        }
+
+        &:checked {
+            & + .checkbox-material .check {
+                background-color: $color-light;
+            }
+        }
+    }
+}
+
+.form-control-number {
+    width: 60px !important;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    margin-top: -30px;
+}
+
+.form-inline {
+    display: inline-block;
+}
+
+label.color-white {
+    color: #fff !important;
+}
+
+.display-block {
+    display: block !important;
+}

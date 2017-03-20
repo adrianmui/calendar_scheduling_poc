@@ -1,0 +1,98 @@
+.owl-carousel {
+    .owl-video-play-icon {
+        background: url("../img/owl.video.play.png") no-repeat;
+    }
+
+    .owl-stage-outer {
+        .owl-stage {
+            .owl-item {
+                &.active {
+                    .card {
+                        animation-name: fadeInUp;
+                        -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                    }
+                }
+            }
+        }
+    }
+
+    &.owl-grab {
+        .owl-stage-outer {
+            .owl-stage {
+                .owl-item {
+                    &.active {
+                        .card {
+                            animation: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.owl-dots {
+    text-align: center;
+    margin: 1rem 0;
+    .owl-dot {
+        display: inline-block;
+        cursor: pointer;
+        span {
+            border-radius: 50%;
+            margin: 0 5px;
+            display: block;
+            background-color: transparent;
+            border: solid 2px $color-primary;
+            width: 12px;
+            height: 12px;
+        }
+
+        &:hover {
+            span {
+                background-color: transparent;
+            }
+        }
+
+        &.active {
+            span {
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &.owl-dots-white {
+        .owl-dot {
+            span {
+                border: solid 2px #fff;
+
+            }
+
+            &.active {
+                span {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .owl-carousel {
+        .owl-stage-outer {
+            .owl-stage {
+                .owl-item {
+                    &.active {
+                        .card {
+                            animation-name:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

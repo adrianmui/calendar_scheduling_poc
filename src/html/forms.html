@@ -1,0 +1,139 @@
+<!-- build:include layout/header.html --><!-- /build -->
+
+<div class="container">
+    <div class="page-title">
+        <h1 class="page-header">Forms</h1>
+
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <ul>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Minima molestias delectus doloribus!</li>
+                    <li>Beatae magni odio eveniet!</li>
+                    <li>Voluptate numquam reprehenderit fuga.</li>
+                    <li>Consectetur quia libero, harum.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <form class="form-horizontal">
+                    <div class="panel-body">
+                        <fieldset>
+                            <legend>Legend</legend>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-md-2 control-label">Password</label>
+
+                                <div class="col-md-10">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 0;">
+                                <!-- inline style is just to demo custom css to put checkbox below input above -->
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Checkbox
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" disabled=""> Disabled Checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="togglebutton">
+                                        <label>
+                                            <input type="checkbox" checked=""> Toggle button
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputFile" class="col-md-2 control-label">File</label>
+
+                                <div class="col-md-10">
+                                    <input type="text" readonly="" class="form-control" placeholder="Browse...">
+                                    <input type="file" id="inputFile" multiple="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="textArea" class="col-md-2 control-label">Textarea</label>
+
+                                <div class="col-md-10">
+                                    <textarea class="form-control" rows="3" id="textArea"></textarea>
+                                    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Radios</label>
+
+                                <div class="col-md-10">
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Option one is this
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="select111" class="col-md-2 control-label">Select</label>
+
+                                <div class="col-md-10">
+                                    <select id="select111" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="select222" class="col-md-2 control-label">Select Multiple</label>
+
+                                <div class="col-md-10">
+                                    <select id="select222" multiple="" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-2">
+                                    <button type="button" class="btn btn-raised btn-default wave-effect">Cancel</button>
+                                    <button type="submit" class="btn btn-raised btn-primary wave-effect-light">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- build:include layout/footer.html --><!-- /build -->

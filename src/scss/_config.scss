@@ -1,0 +1,74 @@
+@import 'variables/material-colors';
+
+$color-primary: $mdc-light-blue-500 !default;
+$color-primary-light: $mdc-light-blue-400 !default;
+$color-primary-dark: $mdc-light-blue-600 !default;
+
+$color-alt: $mdc-blue-grey-500 !default;
+$color-alt-light: $mdc-blue-grey-400 !default;
+$color-alt-dark: $mdc-blue-grey-700 !default;
+
+$color-selector: #fff;
+
+$color-warning: $mdc-orange-500 !default;
+$color-danger: $mdc-red-500 !default;
+$color-success: $mdc-green-500 !default;
+$color-info: $mdc-cyan-500 !default;
+$color-royal: $mdc-purple-500 !default;
+
+$color-warning-light: $mdc-orange-400 !default;
+$color-danger-light: $mdc-red-400 !default;
+$color-success-light: $mdc-green-400 !default;
+$color-info-light: $mdc-cyan-400 !default;
+$color-royal-light: $mdc-purple-400 !default;
+
+$color-warning-dark: $mdc-orange-600 !default;
+$color-danger-dark: $mdc-red-600 !default;
+$color-success-dark: $mdc-green-600 !default;
+$color-info-dark: $mdc-cyan-600 !default;
+$color-royal-dark: $mdc-purple-600 !default;
+
+$color-light-light: $mdc-grey-50 !default;
+$color-light: $mdc-grey-100 !default;
+$color-light-dark: $mdc-grey-200 !default;
+$color-medium-light: $mdc-grey-300 !default;
+$color-medium: $mdc-grey-400 !default;
+$color-medium-dark: $mdc-grey-500 !default;
+$color-dark-light: $mdc-grey-700 !default;
+$color-dark: $mdc-grey-800 !default;
+$color-dark-dark: $mdc-grey-900 !default;
+
+// Social Colors
+$color-twitter: #00aced !default;
+$color-googleplus: #dd4b39 !default;
+$color-rss: #ef922f !default;
+$color-facebook: #3b5998 !default;
+$color-youtube: #bb0000 !default;
+$color-linkedin: #007bb6 !default;
+$color-instagram: #e4405f !default;
+$color-pinterest: #cb2027 !default;
+$color-wordpress: #4597be !default;
+$color-git: #f54c27 !default;
+$color-github: #333 !default;
+$color-flickr: #ff0084 !default;
+$color-stack-overflow: #bbbbbb !default;
+$color-vine: #00b48a !default;
+$color-dribbble: #f26798 !default;
+$color-foursquare: #0072b1 !default;
+$color-tumblr: #32506d !default;
+$color-vk: #4c75a3 !default;
+$color-reddit: #ff5700 !default;
+$color-whatsapp: #25D366 !default;
+$color-soundcloud: #ff3300 !default;
+$color-dropbox: #007ee5 !default;
+$color-vimeo: #1ab7ea !default;
+$color-slack: #3aaf85 !default;
+$color-skype: #00AFF0 !default;
+
+
+// Spacing
+$vertical-margin: 20px;
+$vertical-margin-lg: 40px;
+$vertical-margin-sm: 10px;
+
+$color-list: (light: $color-light, dark: $color-dark, primary: $color-primary, info: $color-info, royal: $color-royal, warning: $color-warning, danger: $color-danger, success: $color-success);

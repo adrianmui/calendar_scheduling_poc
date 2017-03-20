@@ -1,0 +1,138 @@
+<!-- build:include layout/header.html --><!-- /build -->
+
+<div class="material-background"></div>
+
+<div class="container container-full">
+    <div class="ms-paper">
+        <div class="row">
+            <!-- build:componentsMenu component-tooltip.html --><!-- /build -->
+            <div class="col-md-9 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <h1>Tooltip &amp; Popover</h1>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Basic Tooltip</h2>
+
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+                        <button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+
+                        <h3>With Color</h3>
+
+                        <button class="btn btn-primary tooltip-primary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+                        <button class="btn btn-info tooltip-info" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+                        <button class="btn btn-danger tooltip-danger" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+                        <button class="btn btn-warning tooltip-warning" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+                        <button class="btn btn-success tooltip-success" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+                        <button class="btn btn-royal tooltip-royal" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+                        <button class="btn btn-dark tooltip-dark" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+                        <button class="btn btn-default tooltip-light" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+
+                        <hr class="dotted">
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead1">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code1" aria-expanded="false" aria-controls="code1">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead1">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;h2 class=&quot;section-title no-margin-top&quot;&gt;Basic Tooltip&lt;/h2&gt;
+
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/button&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/button&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/button&gt;
+&lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/button&gt;
+
+
+&lt;h3&gt;With Color&lt;/h3&gt;
+&lt;button class=&quot;btn btn-primary tooltip-primary&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/button&gt;
+&lt;button class=&quot;btn btn-info tooltip-info&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/button&gt;
+&lt;button class=&quot;btn btn-danger tooltip-danger&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/button&gt;
+&lt;button class=&quot;btn btn-warning tooltip-warning&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/button&gt;
+&lt;button class=&quot;btn btn-success tooltip-success&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/button&gt;
+&lt;button class=&quot;btn btn-royal tooltip-royal&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/button&gt;
+&lt;button class=&quot;btn btn-dark tooltip-dark&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/button&gt;
+&lt;button class=&quot;btn btn-default tooltip-light&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/button&gt;
+</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Popover</h2>
+
+                        <button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" title="Popover Title" data-content="Lorem ipsum dolor sit amet domi consectetur  adipisicing elit. Excepturi ab ipsum dolorem. Itaque qui intsuct distinctio.">
+                        Popover on left
+                        </button>
+
+                        <button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Popover on top
+                        </button>
+
+                        <button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                        sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Popover on bottom
+                        </button>
+
+                        <button class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        Popover on right
+                        </button>
+
+                        <hr class="dotted">
+
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead2">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code2" aria-expanded="false" aria-controls="code2">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead2">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;h2 class=&quot;section-title no-margin-top&quot;&gt;Popover&lt;/h2&gt;
+
+&lt;button class=&quot;btn btn-default&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; title=&quot;Popover Title&quot; data-content=&quot;Lorem ipsum dolor sit amet domi consectetur  adipisicing elit. Excepturi ab ipsum dolorem. Itaque qui intsuct distinctio.&quot;&gt;
+Popover on left
+&lt;/button&gt;
+
+&lt;button class=&quot;btn btn-default&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
+Popover on top
+&lt;/button&gt;
+
+&lt;button class=&quot;btn btn-default&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; data-content=&quot;Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
+Popover on bottom
+&lt;/button&gt;
+
+&lt;button class=&quot;btn btn-default&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
+Popover on right
+&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+                </div> <!-- ms-paper-content -->
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+    </div> <!-- ms-paper -->
+</div> <!-- container -->
+
+<!-- build:include layout/footer.html --><!-- /build -->

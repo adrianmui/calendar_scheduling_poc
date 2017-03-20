@@ -1,0 +1,9 @@
+@each $n, $c in $color-list {
+    &.circle-#{$n} {
+        stroke: $c;
+    }
+}
+
+.circles-text {
+    font-size: 3rem !important;
+}

@@ -1,0 +1,205 @@
+.card {
+    box-shadow: none;
+    @include shadow-2dp();
+    border-radius: 2px;
+    background-color: #fff;
+    margin-bottom: 2rem;
+
+    .plyr__controls {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .card-block,
+    &.card-block {
+        padding: 2rem;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card-footer {
+        padding: 1rem 2rem 0.7rem 2rem;
+        background-color: $color-light;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card-block-big,
+    &.card-block-big {
+        padding: 4rem;
+    }
+
+    .card-header {
+        padding: 1.5rem 2rem;
+        background-color: $color-light;
+
+        i {
+            margin-right:10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @each $n, $c in $color-list {
+        &.card-#{$n} {
+            border-bottom: solid 3px $c;
+            border-radius: 3px;
+
+
+            .card-header,
+            .card-footer {
+                background-color: $c;
+                color: $color-light;
+            }
+        }
+
+        &.card-#{$n}-inverse {
+            background-color: $c;
+            border-bottom: solid 3px $c;
+            color: #fff;
+
+            a.link {
+                color: #fff;
+
+                &:hover,
+                &:focus {
+                    border-bottom: solid 1px #fff;
+                }
+            }
+
+            .card-header,
+            .card-footer {
+                background-color: darken($c, 7%);
+                color: $color-light;
+            }
+        }
+    }
+
+    &.card-light {
+        .card-header,
+        .card-footer {
+            color: $color-dark;
+        }
+    }
+
+    &.card-light-inverse {
+        color: $color-dark;
+
+        .card-header,
+        .card-footer {
+            color: $color-dark;
+        }
+    }
+
+    .card-block {
+        & > .ms-icon {
+            margin: 1rem 0;
+        }
+    }
+
+    .card-tabs {
+    }
+
+    .list-group {
+        border: none;
+    }
+
+    &.card-flat {
+        box-shadow: none !important;
+    }
+}
+
+.card-hero {
+    position: relative;
+    margin-top: -100px;
+    @include shadow-2dp;
+
+    & > .card-block {
+        padding: 4rem;
+    }
+}
+
+.ms-feature {
+    transition: all ease 0.5s;
+
+    .ms-icon {
+        transition: all ease 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+        @include shadow-3dp();
+        background-color: $color-light-light;
+
+        .ms-icon {
+            transform: rotate(360deg);
+            @include shadow-4dp();
+        }
+    }
+}
+
+.btn-card-float {
+    position: absolute;
+    transform: translate(-50%, -50px);
+    left: 50%;
+    right: auto;
+    @include shadow-6dp();
+
+    &.right {
+        right: 10%;
+        left: auto;
+        transform: translate(0, -50px);
+    }
+
+    &.left {
+        right: auto;
+        left: 10%;
+        transform: translate(0, -50px);
+    }
+}
+
+.card-relative {
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .card {
+        .card-block-big {
+            padding: 2rem;
+        }
+    }
+
+    .card-hero {
+        .card-block {
+            padding: 2rem;
+        }
+    }
+}
