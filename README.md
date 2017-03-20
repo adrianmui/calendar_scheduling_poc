@@ -10,8 +10,8 @@ Loading all depedenent modules
 
 Starting server
 
-`node start`
+`npm start`
 
 Testing console log
 
-`node test`
+`npm test`
