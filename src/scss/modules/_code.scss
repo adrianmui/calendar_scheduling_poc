@@ -1,0 +1,176 @@
+code {
+    color: darken($color-primary, 5%);
+}
+
+$color-code:               $mdc-blue-grey-100;
+$color-code-background:    $mdc-blue-grey-900;
+$color-code-punctuation:   $mdc-light-blue-200;
+$color-code-tag:           $mdc-teal-300;
+$color-code-selector:      $mdc-yellow-700;
+$color-code-keyword:       $mdc-purple-200;
+
+$base-code-tab-size:       4;
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: $color-code;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 13px;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: $base-code-tab-size;
+    -o-tab-size: $base-code-tab-size;
+    tab-size: $base-code-tab-size;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: rgba(255,255,255, 0.2);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: rgba(255,255,255, 0.2);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: $color-code-background;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: $color-code-punctuation;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: $color-code-tag;
+}
+
+.token.string,
+.token.char,
+.token.builtin,
+.token.attr-value,
+.token.inserted {
+    color: $color-code-selector;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: $color-code-selector;
+}
+
+.token.selector,
+.token.attr-name,
+.token.atrule,
+.token.important,
+.token.keyword {
+    color: $color-code-keyword;
+}
+
+.token.function {
+    color: $color-code-tag;
+}
+
+.token.regex,
+.token.variable {
+    color: $color-code-selector;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 0;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.line-numbers-rows > span {
+	pointer-events: none;
+	display: block;
+	counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: $mdc-blue-grey-600;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}

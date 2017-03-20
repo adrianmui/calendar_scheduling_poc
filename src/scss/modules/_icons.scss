@@ -1,0 +1,172 @@
+.rotate-icon {
+    i {
+        transition-duration: .5s;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+    }
+
+    &:hover {
+        i {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+    }
+}
+
+.ms-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    background-color: $color-primary;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    line-height: 2.2;
+
+    &.color-info {
+        color: #fff !important;
+        background-color: $color-info;
+    }
+
+    &.color-warning {
+        color: #fff !important;
+        background-color: $color-warning;
+    }
+
+    &.color-danger {
+        color: #fff !important;
+        background-color: $color-danger;
+    }
+
+    &.color-success {
+        color: #fff !important;
+        background-color: $color-success;
+    }
+
+    &.color-royal {
+        color: #fff !important;
+        background-color: $color-royal;
+    }
+
+    &.color-black {
+        color: #fff !important;
+        background-color: #000;
+    }
+
+    &.ms-icon-inverse {
+        background-color: transparent;
+        color: $color-primary;
+        border: solid 1px $color-primary;
+
+        &.color-info {
+            background-color: transparent;
+            border-color: $color-info;
+            color: $color-info !important;
+        }
+
+        &.color-warning {
+            background-color: transparent;
+            border-color: $color-warning;
+            color: $color-warning !important;
+        }
+
+        &.color-danger {
+            background-color: transparent;
+            border-color: $color-danger;
+            color: $color-danger !important;
+        }
+
+        &.color-success {
+            background-color: transparent;
+            border-color: $color-success;
+            color: $color-success !important;
+        }
+
+        &.color-royal {
+            background-color: transparent;
+            border-color: $color-royal;
+            color: $color-royal !important;
+        }
+
+        &.color-black {
+            background-color: transparent;
+            border-color: #000;
+            color: #000 !important;
+        }
+    }
+
+    &.ms-icon-square {
+        border-radius: 0;
+    }
+
+    &.ms-icon-round {
+        border-radius: 5px;
+    }
+
+    &.ms-icon-circle {
+        border-radius: 50%;
+    }
+
+    &.ms-icon-lg {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 22px;
+    }
+
+    &.ms-icon-xlg {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+
+    &.ms-icon-xxlg {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 36px;
+    }
+
+    &.ms-icon-sm {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    &.ms-icon-white {
+        background-color: #fff;
+        color: $color-primary;
+
+        &.ms-icon-inverse {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+.ms-icon-feature {
+    display: table;
+    margin-bottom: 60px;
+
+    .ms-icon-feature-icon {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 20px;
+    }
+
+    .ms-icon-feature-content {
+        display: table-cell;
+        vertical-align: top;
+        font-size: 1.4rem;
+
+        h4 {
+            font-weight: 400;
+            margin: 0 0 10px 0;
+        }
+    }
+}

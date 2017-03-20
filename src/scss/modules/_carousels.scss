@@ -1,0 +1,486 @@
+.ms-carousel {
+    .carousel-control {
+        background: none;
+        opacity: 1;
+        text-shadow: none;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        height: auto;
+        position: absolute;
+        opacity: 0.3;
+        transition: all ease 0.3s;
+
+        &.left {
+            left: 30px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+    .carousel-indicators {
+        top: 4%;
+        right: 5%;
+        left: auto;
+        bottom: auto;
+        width: auto;
+
+        li {
+            //border-color: $color-primary;
+            background-color: #fff;
+            //@include shadow-2dp;
+            height: 10px;
+            width: 10px;
+            opacity: 0.3;
+            transition: all ease 0.3s;
+
+            &.active {
+                border-color: #fff;
+                background-color: #fff;
+                //width: 11px;
+                //height: 11px;
+                margin: 1px;
+                //@include shadow-3dp;
+            }
+        }
+    }
+
+    .carousel-inner {
+        .item {
+            .carousel-caption {
+                background-color: rgba(0, 0, 0, 0.4);
+                bottom: -100%;
+                left: 0;
+                right: 0;
+                transition: all ease 0.5s;
+            }
+        }
+    }
+
+    .carousel-indicators-tumbs {
+        list-style-type: none;
+        list-style-position: outside;
+        padding: 0;
+        //width: 100%;
+        //text-align: center;
+        right: 4%;
+        margin: 0 0 2rem 0;
+        transform: scale(0.6);
+        transform-origin: top right;
+        transition: all ease 0.3s;
+
+        li {
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            background-color: transparent;
+            line-height: 1;
+            text-indent: 0;
+            opacity: 0.4;
+            display: inline-block;
+            @include shadow-2dp;
+            //max-width: 50px;
+            //max-height: 50px;
+            border: solid 2px #fff;
+            transition: all ease 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                @include shadow-4dp;
+                transform: translateY(-5px);
+            }
+
+            &.active {
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    .carousel-indicators-tumbs-outside {
+        position: static;
+        width: 100%;
+        transform: none;
+        opacity: 1;
+
+        li {
+            opacity: 1;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .carousel-control {
+            opacity: 1;
+        }
+
+        .carousel-indicators {
+            li {
+                opacity: .5;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .carousel-indicators-tumbs {
+            transform: scale(1);
+            li {
+                opacity: 1;
+            }
+        }
+
+
+        .carousel-inner {
+            .item {
+                .carousel-caption {
+                    bottom: 0;
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.6);
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-caption-blog {
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        transition: all ease 0.5s;
+    }
+
+    &:hover {
+        .carousel-caption-blog {
+            background-color: rgba(0,0,0,0.8);
+        }
+    }
+}
+
+.carousel-cards {
+
+    .carousel-inner {
+        //overflow: visible;
+        padding-bottom: 6rem;
+
+        .item {
+            .carousel-caption {
+                //padding-top: 5rem;
+                padding: 0;
+                position: static;
+                text-shadow: none;
+                color: $color-dark;
+                font-weight: 300;
+                text-align: left;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        width: auto;
+        display: inline-block;
+        margin: 0;
+        transform: translateX(-50%);
+
+        li {
+            width: 12px;
+            height: 12px;
+            border: solid 2px #fff;
+
+            &.active {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        bottom: 0;
+
+        &.carousel-indicators-primary {
+            li {
+                border-color: $color-primary;
+
+                &.active {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .carousel-control {
+        background: none;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0rem;
+        top: auto;
+        opacity: 1;
+        border-radius: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+
+        i {
+            display: block;
+            width: 50px;
+            line-height: 50px;
+            text-shadow: none;
+            font-size: 24px;
+        }
+
+        &.right {
+            right: 20%;
+        }
+
+        &.left {
+            left: 20%;
+        }
+    }
+}
+
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+.carousel-header {
+    margin: 0;
+    padding: 4rem 0 8rem 0;
+
+    .carousel-inner {
+        .item {
+            .carousel-caption {
+                position: static;
+            }
+        }
+    }
+
+    .carousel-control {
+        background: none;
+        opacity: 1;
+        text-shadow: none;
+        box-shadow: none !important;
+        top: 20px;
+        transform: translateY(-50%);
+        bottom: auto;
+        height: auto;
+        position: absolute;
+        //opacity: 0.3;
+        transition: all ease 0.3s;
+
+        &.left {
+            left: auto;
+            right: 80px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+    .carousel-indicators {
+        top: auto;
+        bottom: 0;
+
+        li {
+            //background-color: #fff;
+
+            &.active {
+                background-color: $color-primary;
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    .carousel-caption {
+        text-align: left;
+        padding: 0 4rem 0 0;
+    }
+}
+
+.list-hero {
+    font-size: 2.2rem;
+    //line-height: 1rem;
+    font-weight: 300;
+
+    li {
+        margin-bottom: 3rem;
+        display: table;
+        width: 100%;
+        transition: all ease 1s;
+
+        span {
+            display: table-cell;
+            //width: 100%;
+            background-color: rgba(255,255,255,0.1);
+            padding: 0 2rem;
+            box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.8), inset 0px 0px 1px 0px rgba(255,255,255,0.3);
+            height: 60px;
+            line-height: 4rem;
+            transition: all ease 0.3s;
+            padding-top: 1rem;
+            //display: inline
+        }
+
+        i {
+            display: table-cell;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            background-color: rgba(255,255,255,0.1);
+            padding: 0 2rem;
+            box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.8), inset 0px 0px 1px 0px rgba(255,255,255,0.3);
+            transition: all ease 0.3s;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            span, i {
+                background-color: rgba(255,255,255,0.15);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-header {
+        .carousel-caption {
+            padding-right: 0;
+        }
+
+        .carousel-control {
+            top: 0px;
+
+            &.left {
+                right: 50px;
+            }
+
+            &.right {
+                right: 10px;
+            }
+        }
+    }
+
+    .list-hero {
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        li {
+            span {
+                //line-height: 4rem;
+            }
+        }
+    }
+}
+
+.ms-carousel-shop {
+    .carousel-control {
+        background: none;
+        opacity: 1;
+        text-shadow: none;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        height: auto;
+        position: absolute;
+        opacity: 1;
+        transition: all ease 0.3s;
+
+        &.left {
+            left: 30px;
+        }
+
+        &.right {
+            right: 30px;
+        }
+    }
+
+    .carousel-indicators {
+        display: inline-block;
+        width: auto;
+        top: 0px;
+        bottom: auto;
+        left: auto;
+        right: 30px;
+
+        li {
+            background-color: #fff;
+
+            &.active {
+                background-color: $color-primary;
+                border-color: $color-primary;
+            }
+        }
+    }
+
+    .carousel-inner {
+        .item {
+            .carousel-caption {
+                position: static;
+                text-align: left;
+            }
+        }
+    }
+}

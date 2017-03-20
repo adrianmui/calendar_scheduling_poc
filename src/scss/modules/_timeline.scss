@@ -1,0 +1,376 @@
+@media (min-width: 768px) {
+    .ms-timeline {
+        list-style-type: none;
+        border-left: solid 6px $color-medium-light;
+        padding: 0;
+        margin-left: 120px;
+
+        .ms-timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+
+            .card {
+                margin-left: 20px;
+                transition: box-shadow ease 0.5s;
+            }
+
+            .ms-timeline-date {
+                .ms-timeline-point {
+                    position: absolute;
+                    left: -11px;
+                    top: 20px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    background-color: $color-primary;
+                    //@include shadow-2dp;
+                    border: solid 3px $color-medium-light;
+                    transition: all ease 0.5s;
+                }
+
+                .ms-timeline-point-img {
+                    width: 75px;
+                    height: 75px;
+                    left: -90px;
+                    top: 70px;
+                    border: solid 3px $color-medium-light;
+                    transition: all ease 0.5s;
+                    position: absolute;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 100%;
+                    }
+                }
+
+                .timeline-time {
+                    position: absolute;
+                    width: 100px;
+                    left: -130px;
+                    text-align: right;
+                    //background-color: #f00;
+                    display: block;
+
+                    span {
+                        display: block;
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .ms-timeline-date {
+                    .ms-timeline-point {
+                        //background-color: $color-dark !important;
+                        transform: scale(1.5);
+                    }
+                }
+
+                .card {
+                    @include shadow-4dp;
+                }
+            }
+        }
+    }
+}
+
+.ms-timeline-left {
+    list-style-type: none;
+    margin-left: 300px;
+    border-left: solid 3px $color-primary;
+    position: relative;
+    padding-left: 0;
+
+    .ms-timeline-left-item {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 5rem;
+
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100%;
+            border: solid 3px $color-primary;
+            background-color: #fff;
+            height: 21px;
+            width: 21px;
+            left: -12px;
+            top: 0;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100%;
+            background-color: $color-primary;
+            height: 9px;
+            width: 9px;
+            left: -6px;
+            top: 6px;
+            transition: all ease 0.2s;
+        }
+
+        &:hover {
+            &:after {
+                background-color: $color-dark;
+            }
+        }
+
+        .ms-timeline-left-city {
+            font-size: 1.3rem;
+            color: $color-medium-dark;
+            position: absolute;
+            right: 0;
+            top: -5px;
+
+            &:before {
+                font-family: 'Material-Design-Iconic-Font';
+                content: "\f1ab";
+                margin-right: 5px;
+            }
+        }
+
+
+        .ms-timeline-left-left {
+            float: left;
+            margin-left: -300px;
+            margin-top: -30px;
+
+            h4 {
+                margin: 0;
+            }
+
+            .ms-timeline-left-time {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .ms-timeline-left {
+        margin-left: 0;
+        .ms-timeline-left-item {
+            .ms-timeline-left-left {
+                float: none;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .ms-timeline {
+        list-style-type: none;
+        border-left: solid 6px $color-medium-light;
+        padding: 0 0 0 20px;
+
+        .ms-timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+
+            .card {
+            }
+
+            .ms-timeline-date {
+                margin-bottom: 1rem;
+
+                .ms-timeline-point {
+                    position: absolute;
+                    left: -30px;
+                    top: 7px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    background-color: $color-primary;
+                    //@include shadow-2dp;
+                    border: solid 3px $color-medium-light;
+                    transition: all ease 0.5s;
+                }
+
+                .ms-timeline-point-img {
+                    width: 50px;
+                    height: 50px;
+                    left: 0px;
+                    top: 70px;
+                    border: solid 3px $color-medium-light;
+                    transition: all ease 0.5s;
+                    //position: absolute;
+                    border-radius: 50%;
+                    margin-top: -10px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 100%;
+                    }
+                }
+
+                .timeline-time {
+                    font-size: 2rem;
+
+                    span {
+
+                    }
+                }
+            }
+
+            &:hover {
+                .ms-timeline-date {
+                    .ms-timeline-point {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .timeline-center {
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            display: block;
+            content: "";
+            height: 100%;
+            width: 6px;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            background-color: $color-medium-light;
+            position: absolute;
+        }
+
+        & > [class*="col-"] {
+            .left,
+            .right {
+                position: relative;
+                margin-bottom: 4rem;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    right: -48px;
+                    z-index: 2;
+                    top: 15px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    background-color: $color-primary;
+                    //@include shadow-2dp;
+                    border: solid 3px $color-medium-light;
+                    transition: all ease 0.5s;
+                }
+
+                &:hover {
+                    &:before {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+
+            .left {
+                margin-right: 25px;
+
+
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    top: 10px;
+                    right: -35px;
+                    border-left: solid 15px $color-primary;
+                    border-right: solid 20px transparent;
+                    border-top: solid 13px transparent;
+                    border-bottom: solid 13px transparent;
+                }
+
+                @each $n, $c in $color-list {
+                    &.card-#{$n} {
+                        &:after {
+                            border-left-color: $c;
+                        }
+
+                        &:before {
+                            background-color: $c;
+                        }
+                    }
+                }
+
+                @each $n, $c in $color-list {
+                    &.card-#{$n}-inverse {
+                        &:after {
+                            border-left-color: $c;
+                        }
+
+                        &:before {
+                            background-color: $c;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                margin-left: 25px;
+
+                &:first-child {
+                    margin-top: 6rem;
+                }
+
+                &:before {
+                    left: -48px;
+                    right: auto;
+                }
+
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    top: 10px;
+                    left: -35px;
+                    border-right: solid 15px $color-primary;
+                    border-left: solid 20px transparent;
+                    border-top: solid 13px transparent;
+                    border-bottom: solid 13px transparent;
+                }
+
+                @each $n, $c in $color-list {
+                    &.card-#{$n} {
+                        &:after {
+                            border-right-color: $c;
+                        }
+
+                        &:before {
+                            background-color: $c;
+                        }
+                    }
+                }
+
+                @each $n, $c in $color-list {
+                    &.card-#{$n}-inverse {
+                        &:after {
+                            border-right-color: $c;
+                        }
+
+                        &:before {
+                            background-color: $c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

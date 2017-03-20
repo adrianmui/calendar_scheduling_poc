@@ -1,0 +1,65 @@
+<!-- build:include layout/header.html --><!-- /build -->
+
+<div class="material-background"></div>
+
+<div class="container container-full">
+    <div class="ms-paper">
+        <div class="row">
+            <!-- build:componentsMenu component-charts-more.html --><!-- /build -->
+            <div class="col-md-9 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <h1>More Charts</h1>
+                    <div class="alert alert-royal alert-light">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+                        <strong>Info:</strong> Material Style use the <a href="http://www.chartjs.org/">chart.js</a> library to create charts. Read the documentation to adapt the graphics to your project.
+                    </div>
+                    <div class="alert alert-warning alert-light">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+                        <strong>Info:</strong> The sample data is generated with random numbers. Recharge your browser to see new graphics.
+                    </div>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Pie &amp; Doughnut Charts</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="text-center">Pie Charts</h3>
+                                <canvas id="myChart1"></canvas>
+                                <hr class="dotted">
+                                <canvas id="myChart3"></canvas>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="text-center">Doughnut Charts</h3>
+                                <canvas id="myChart2"></canvas>
+                                <hr class="dotted">
+                                <canvas id="myChart4"></canvas>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Polar Area Charts</h2>
+                        <canvas id="myChart5"></canvas>
+                    </section>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Radar Chart</h2>
+                        <canvas id="myChart7"></canvas>
+                    </section>
+                    <section class="ms-component-section">
+                        <h2 class="section-title no-margin-top">Bubble Chart</h2>
+                        <canvas id="myChart6"></canvas>
+                    </section>
+                </div> <!-- ms-paper-content -->
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+    </div> <!-- ms-paper -->
+</div> <!-- container -->
+
+<!-- build:include layout/footer/footbar.html --><!-- /build -->
+<!-- build:include layout/footer/foot.html --><!-- /build -->
+
+</div> <!-- sb-site-container -->
+
+<!-- build:include layout/slidebar.html --><!-- /build -->
+<!-- build:include layout/footer/scripts.html --><!-- /build -->
+<script src="<%= assets %>/js/charts-more.js"></script>
+
+</body>
+</html>

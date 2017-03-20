@@ -1,0 +1,155 @@
+.pagination {
+    li {
+        a {
+            margin: 0 8px;
+            border-radius: 100%;
+            color: $color-primary;
+            border-color: $color-medium-light;
+            position: relative;
+            //background-color: $color-light-light;
+            z-index: 2;
+            transition: all ease 0.5s;
+            @include shadow-2dp();
+            border: 0;
+            padding: 8px 14px;
+        }
+
+        &:first-child,
+        &:last-child {
+            a {
+                border-radius: 100%;
+            }
+        }
+
+        &.active {
+            a {
+                background-color: $color-primary;
+                border-color: $color-primary;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        a {
+            &:hover,
+            &:focus {
+                background-color: $color-primary;
+                border-color: $color-primary;
+                color: #fff;
+                @include shadow-6dp();
+                //padding: 9px 15px;
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    &.pagination-round {
+        li {
+            a {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &.pagination-square {
+        li {
+            a {
+                border-radius: 0px;
+            }
+        }
+    }
+
+    &.pagination-plain {
+        li {
+            a {
+                box-shadow: none;
+                //border-radius: 0px;
+
+                &:hover,
+                &:focus {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    @each $n, $c in $color-list {
+        &.pagination-#{$n} {
+            li {
+                a {
+                    color: $c;
+                }
+
+                &.active {
+                    a {
+                        color: #fff;
+                        background-color: $c;
+                    }
+                }
+
+                a:hover,
+                a:focus {
+                    color: #fff;
+                    background-color: $c;
+                }
+            }
+
+            .disabled {
+                a {
+                    color: $color-medium-dark;
+
+                    &:hover,
+                    &:focus {
+                        background-color: transparent;
+                        color: $color-medium-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pager {
+    li {
+        a {
+            color: $color-primary;
+            border: 0;
+            transition: all ease 0.5s;
+            border-radius: 5px;
+            @include shadow-2dp;
+
+            &:hover,
+            &:focus {
+                background-color: $color-primary;
+                color: #fff;
+            }
+        }
+    }
+
+    &.pager-flat {
+        li {
+            a {
+                box-shadow: none;
+            }
+        }
+    }
+
+    @each $n, $c in $color-list {
+        &.pager-#{$n} {
+            li {
+                a {
+                    color: $c;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $c;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

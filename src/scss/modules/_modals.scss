@@ -1,0 +1,140 @@
+.modal {
+    color: $color-dark;
+    background-color: rgba(0,0,0, 0.3);
+
+    .modal-content {
+        //spadding: 1rem;
+        border-radius: 2px;
+
+        .modal-header {
+            border-radius: 2px 2px 0 0;
+            padding: 0;
+            padding: 0;
+            //background-color: $color-light;
+
+            .close {
+                color: $color-dark-light;
+                opacity: .8;
+                font-size: 14px;
+                padding: .5rem;
+                margin: 1.4rem 2.4rem 0 0;
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+
+            .modal-title {
+                margin: 0;
+                //display: inline-block;
+                padding: 3rem 2.4rem 0rem 2.4rem;
+            }
+        }
+
+        .modal-body {
+            padding: 2.4rem;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .modal-footer {
+            padding: 1rem 2rem;
+        }
+    }
+
+    @each $n, $c in $color-list {
+        &.modal-#{$n} {
+            .modal-content {
+                border-bottom: solid 3px $c;
+            }
+
+            .modal-header {
+                background-color: $c;
+                color: #fff;
+
+                .close {
+                    color: #fff;
+                }
+
+                .modal-title {
+                    padding: 1.4rem 2.4rem;
+                }
+
+                .modal-header-tabs {
+                    .nav-tabs-underline {
+                        &:before {
+                            background-color: $c;
+                        }
+
+                        li {
+                            a {
+                                color: #fff !important;
+                            }
+                        }
+
+                        .ms-tabs-indicator {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.modal-primary {
+
+        .modal-content {
+            border-bottom: solid 3px $color-primary;
+        }
+
+        .modal-header {
+            background-color: $color-primary;
+            color: #fff;
+
+            .close {
+                color: #fff;
+            }
+
+            .modal-title {
+                padding: 1.4rem 2.4rem;
+            }
+
+            .modal-header-tabs {
+                .nav-tabs-underline {
+                    &:before {
+                        background-color: $color-primary;
+                    }
+
+                    li {
+                        a {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .ms-tabs-indicator {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-open .sb-site-container {
+    position: static !important;
+    overflow: hidden !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+}
+
+.modal-open {
+    position: static !important;
+    overflow: hidden !important;
+    width: auto !important;
+    height: auto !important;
+    padding-right: 0 !important;
+}

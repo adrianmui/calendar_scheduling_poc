@@ -1,0 +1,216 @@
+.ms-paper {
+    @keyframes shadow-retard {
+        0% {box-shadow: none}
+        100% {box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);}
+    }
+
+    //background-color: #fff;
+    animation-name: shadow-retard, slideInLeftTiny;
+    animation-duration: 5s, 1.4s;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1), ease;
+    //box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+    @include shadow-2dp();
+    margin-bottom: 3rem;
+    will-change: box-shadow;
+
+
+    & > .row {
+        overflow: hidden;
+
+        & > [class*="col-"]{
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+
+        .ms-paper-menu-left-container {
+            padding-right: 0;
+            animation-name: slideInRight;
+            animation-duration: 1s;
+            animation-delay: 0.6s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+
+            .ms-paper-menu-left  {
+                background-color: $color-light-dark;
+                margin-bottom: -99999px;
+                padding-bottom: 99999px;
+                //box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+                @include shadow-2dp();
+                position: relative;
+
+
+                .ms-paper-menu-title {
+                    margin: 0;
+                    padding: 30px 10px;
+                    text-align: center;
+                    font-size: 1.7rem;
+                    background-color: $color-primary;
+                    color: #fff;
+                    text-transform: uppercase;
+                    position: relative;
+
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        display: none;
+                        color: #fff;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        i {
+                            position: absolute;
+                            top: 36%;
+                            right: 0.7rem;
+                            font-size: 2.1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ms-paper-content-container {
+            padding-left: 0;
+
+
+            .ms-paper-content {
+                padding: 3rem;
+                //box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+                @include shadow-4dp();
+                background-color: #fff;
+                margin-bottom: -99999px;
+                padding-bottom: 99999px;
+                // box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+
+                & > *:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.ms-collapse-nav {
+    margin: 0;
+    padding: 0;
+
+    li {
+        a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: $color-dark;
+            background-color: $color-light-dark;
+            //border-bottom: solid 1px $mdc-grey-300;
+
+            &:after {
+                font-family: 'Material-Design-Iconic-Font';
+                font-size: 1.2em;
+
+                float: right;
+
+                content: '\f2fb';
+            }
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover,
+            &:focus,
+            &.active {
+                //background-color: $mdc-grey-300;
+                background-color: $color-primary;
+                color: #fff;
+            }
+        }
+
+        list-style-type: none;
+        list-style-position: outside;
+        padding: 0;
+        margin: 0;
+
+        &.panel {
+            background-color: transparent;
+            box-shadow: none;
+            //box-shadow: inset -1px -1px 3px 1px rgba(0,0,0,0.2) !important;
+
+            a {
+                background-color: $color-primary;
+                color: #fff;
+
+                &:after {
+                    content: '\f273';
+                }
+
+                &.collapsed {
+                    background-color: $color-light-dark;
+                    color: $color-dark;
+
+                    &:after {
+                        content: '\f278';
+                    }
+
+                    &:hover {
+                        background-color: $color-primary;
+                        color: #fff;
+                    }
+                }
+            }
+
+            ul {
+                box-shadow: inset 0px 1px 3px 1px rgba(0,0,0,0.2) !important;
+                background-color: $mdc-grey-300;
+                padding: 0;
+
+                a {
+                    color: $color-dark;
+                    background-color: transparent;
+
+                    &:after {
+                        content: '\f2fb';
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        background-color: rgba(0, 0, 0, 0.3);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.panel + .panel {
+            margin: 0;
+        }
+    }
+}
+
+.ms-component-section {
+    .wrap-inverse {
+        background-color: $color-primary;
+        color: #fff;
+        margin: 4rem -3rem;
+        padding: 2rem 4rem;
+
+        .section-title {
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+
+    .wrap-light {
+        background-color: $color-light;
+        margin: 4rem -3rem;
+        padding: 2rem 4rem;
+    }
+}

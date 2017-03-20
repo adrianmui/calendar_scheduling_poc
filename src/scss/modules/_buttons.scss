@@ -1,0 +1,1515 @@
+.btn {
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    white-space: nowrap;
+    align-self: center;
+    outline: rgba(0, 0, 0, 0.870588) none 0px;
+    //-webkit-text-stroke-width: .1px;
+
+    &.btn-square {
+        border-radius: 0 !important;
+    }
+
+    &.btn-white {
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba(0, 0, 0, .2) !important;
+        }
+
+        &.btn-raised {
+            color: #000;
+            background-color: #fff;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #fff !important;
+            }
+        }
+    }
+
+
+
+    &.btn-xlg {
+        padding: 10px 40px;
+        font-size: 16px;
+    }
+
+    &.btn-xxlg {
+        padding: 16px 40px;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+    }
+
+    & > i {
+        margin-right: 1rem
+    }
+
+    & > i.right {
+        margin-left: 1rem;
+        margin-right: 0rem;
+    }
+
+    & > i.only {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+
+    &.btn-app {
+
+        padding: 1.2rem 2rem;
+        min-width: 180px;
+
+        .btn-container {
+            display: table;
+            text-transform: none;
+            text-align: left;
+        }
+
+        i {
+            font-size: 4rem !important;
+            display: table-cell;
+            padding-right: 2rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+        }
+
+        strong {
+            font-size: 1.8rem;
+        }
+    }
+
+    &.btn-fab {
+        &:active,
+        &:focus {
+            //@include focus-shadow();
+        }
+
+        &.btn-default {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #dfdfdf;
+            }
+        }
+
+        &.btn-primary {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-primary-dark;
+            }
+        }
+
+        &.btn-info {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-info-dark;
+            }
+        }
+
+        &.btn-success {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-success-dark;
+            }
+        }
+
+        &.btn-warning {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-warning-dark;
+            }
+        }
+
+        &.btn-danger {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-danger-dark;
+            }
+        }
+
+        &.btn-royal {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-royal-dark;
+            }
+        }
+    }
+
+    &.btn-raised {
+        &:hover,
+        &:focus,
+        &:active {
+            @include shadow-4dp();
+        }
+
+        &.btn-facebook {
+            color: #fff;;
+            background-color: $color-facebook;
+
+            &:hover,
+            &:focus {
+                background-color: $color-facebook;
+            }
+        }
+
+        &.btn-twitter {
+            color: #fff;;
+            background-color: $color-twitter;
+
+            &:hover,
+            &:focus {
+                background-color: $color-twitter;
+            }
+        }
+
+        &.btn-google {
+            color: #fff;;
+            background-color: $color-googleplus;
+
+            &:hover,
+            &:focus {
+                background-color: $color-googleplus;
+            }
+        }
+
+        &.btn-rss {
+            color: #fff;;
+            background-color: $color-rss;
+
+            &:hover,
+            &:focus {
+                background-color: $color-rss;
+            }
+        }
+
+        &.btn-youtube {
+            color: #fff;;
+            background-color: $color-youtube;
+
+            &:hover,
+            &:focus {
+                background-color: $color-youtube;
+            }
+        }
+
+        &.btn-linkedin {
+            color: #fff;;
+            background-color: $color-linkedin;
+
+            &:hover,
+            &:focus {
+                background-color: $color-linkedin;
+            }
+        }
+
+        &.btn-instagram {
+            color: #fff;;
+            background-color: $color-instagram;
+
+            &:hover,
+            &:focus {
+                background-color: $color-instagram;
+            }
+        }
+
+        &.btn-pinterest {
+            color: #fff;;
+            background-color: $color-pinterest;
+
+            &:hover,
+            &:focus {
+                background-color: $color-pinterest;
+            }
+        }
+
+        &.btn-wordpress {
+            color: #fff;;
+            background-color: $color-wordpress;
+
+            &:hover,
+            &:focus {
+                background-color: $color-wordpress;
+            }
+        }
+
+        &.btn-git {
+            color: #fff;;
+            background-color: $color-git;
+
+            &:hover,
+            &:focus {
+                background-color: $color-git;
+            }
+        }
+
+        &.btn-github {
+            color: #fff;;
+            background-color: $color-github;
+
+            &:hover,
+            &:focus {
+                background-color: $color-github;
+            }
+        }
+
+        &.btn-flickr {
+            color: #fff;;
+            background-color: $color-flickr;
+
+            &:hover,
+            &:focus {
+                background-color: $color-flickr;
+            }
+        }
+
+        &.btn-vine {
+            color: #fff;;
+            background-color: $color-vine;
+
+            &:hover,
+            &:focus {
+                background-color: $color-vine;
+            }
+        }
+
+        &.btn-dribbble {
+            color: #fff;;
+            background-color: $color-dribbble;
+
+            &:hover,
+            &:focus {
+                background-color: $color-dribbble;
+            }
+        }
+
+        &.btn-foursquare {
+            color: #fff;;
+            background-color: $color-foursquare;
+
+            &:hover,
+            &:focus {
+                background-color: $color-foursquare;
+            }
+        }
+
+        &.btn-tumblr {
+            color: #fff;;
+            background-color: $color-tumblr;
+
+            &:hover,
+            &:focus {
+                background-color: $color-tumblr;
+            }
+        }
+
+        &.btn-vk {
+            color: #fff;;
+            background-color: $color-vk;
+
+            &:hover,
+            &:focus {
+                background-color: $color-vk;
+            }
+        }
+        &.btn-reddit {
+            color: #fff;;
+            background-color: $color-reddit;
+
+            &:hover,
+            &:focus {
+                background-color: $color-reddit;
+            }
+        }
+        &.btn-whatsapp {
+            color: #fff;;
+            background-color: $color-whatsapp;
+
+            &:hover,
+            &:focus {
+                background-color: $color-whatsapp;
+            }
+        }
+        &.btn-soundcloud {
+            color: #fff;;
+            background-color: $color-soundcloud;
+
+            &:hover,
+            &:focus {
+                background-color: $color-soundcloud;
+            }
+        }
+        &.btn-dropbox {
+            color: #fff;;
+            background-color: $color-dropbox;
+
+            &:hover,
+            &:focus {
+                background-color: $color-dropbox;
+            }
+        }
+        &.btn-vimeo {
+            color: #fff;;
+            background-color: $color-vimeo;
+
+            &:hover,
+            &:focus {
+                background-color: $color-vimeo;
+            }
+        }
+
+        &.btn-slack {
+            color: #fff;;
+            background-color: $color-slack;
+
+            &:hover,
+            &:focus {
+                background-color: $color-slack;
+            }
+        }
+
+        &.btn-skype {
+            color: #fff;;
+            background-color: $color-skype;
+
+            &:hover,
+            &:focus {
+                background-color: $color-skype;
+            }
+        }
+    }
+
+    &.btn-facebook {
+        color: $color-facebook;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-facebook !important;
+        }
+    }
+
+    &.btn-twitter {
+        color: $color-twitter;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-twitter !important;
+        }
+    }
+
+    &.btn-google {
+        color: $color-googleplus;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-googleplus !important;
+        }
+    }
+
+    &.btn-rss {
+        color: $color-rss;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-rss !important;
+        }
+    }
+
+    &.btn-youtube {
+        color: $color-youtube;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-youtube !important;
+        }
+    }
+
+    &.btn-linkedin {
+        color: $color-linkedin;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-linkedin !important;
+        }
+    }
+
+    &.btn-instagram {
+        color: $color-instagram;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-instagram !important;
+        }
+    }
+
+    &.btn-pinterest {
+        color: $color-pinterest;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-pinterest !important;
+        }
+    }
+
+    &.btn-wordpress {
+        color: $color-wordpress;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-wordpress !important;
+        }
+    }
+
+    &.btn-git {
+        color: $color-git;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-git !important;
+        }
+    }
+
+    &.btn-github {
+        color: $color-github;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-github !important;
+        }
+    }
+
+    &.btn-flickr {
+        color: $color-flickr;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-flickr !important;
+        }
+    }
+
+    &.btn-vine {
+        color: $color-vine;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-vine !important;
+        }
+    }
+
+    &.btn-dribbble {
+        color: $color-dribbble;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-dribbble !important;
+        }
+    }
+
+    &.btn-foursquare {
+        color: $color-foursquare;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-foursquare !important;
+        }
+    }
+
+    &.btn-tumblr {
+        color: $color-tumblr;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-tumblr !important;
+        }
+    }
+
+    &.btn-vk {
+        color: $color-vk;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-vk !important;
+        }
+    }
+
+    &.btn-reddit {
+        color: $color-reddit;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-reddit !important;
+        }
+    }
+
+    &.btn-whatsapp {
+        color: $color-whatsapp;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-whatsapp !important;
+        }
+    }
+
+    &.btn-soundcloud {
+        color: $color-soundcloud;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-soundcloud !important;
+        }
+    }
+
+    &.btn-dropbox {
+        color: $color-dropbox;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-dropbox !important;
+        }
+    }
+
+    &.btn-vimeo {
+        color: $color-vimeo;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-vimeo !important;
+        }
+    }
+
+    &.btn-slack {
+        color: $color-slack;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-slack !important;
+        }
+    }
+
+    &.btn-skype {
+        color: $color-skype;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-skype !important;
+        }
+    }
+}
+
+.btn-circle {
+    //background-color: #f00;
+    height: 50px;
+    width: 50px;
+    color: $color-dark-light;
+    display: inline-block;
+    border-radius: 200rem;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    transition: color ease 0.5s;
+    transition: box-shadow ease-in-out 0s;
+    border: 0;
+    background-color: transparent;
+
+    &:before {
+        transition: all ease 0.5s;
+        border-radius: 150px;
+        z-index: -1;
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $color-light-dark;
+
+        height: 0px;
+        width: 0px;
+        top: 25px;
+        left: 25px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-dark-light;
+        //@include shadow-2dp();
+        transition: box-shadow ease-in-out 0.8s;
+        &:before {
+            //border-radius: 0;
+            height: 50px;
+            width: 50px;
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    i.zmdi {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    &.btn-circle-xlg {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 20px;
+
+        &:before {
+            top: 35px;
+            left: 35px;
+        }
+
+        &:hover,
+        &:focus {
+            &:before {
+                height: 70px;
+                width: 70px;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        i.zmdi {
+            font-size: 26px;
+        }
+    }
+
+    &.btn-circle-lg {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+
+        &:before {
+            top: 30px;
+            left: 30px;
+        }
+
+        &:hover,
+        &:focus {
+            &:before {
+                height: 60px;
+                width: 60px;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        i.zmdi {
+            font-size: 24px;
+        }
+    }
+
+    &.btn-circle-sm {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+
+        &:before {
+            top: 20px;
+            left: 20px;
+        }
+
+        &:hover,
+        &:focus {
+            &:before {
+                height: 40px;
+                width: 40px;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        i.zmdi {
+            font-size: 18px;
+        }
+    }
+
+    &.btn-circle-xs {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 10px;
+
+        &:before {
+            top: 15px;
+            left: 15px;
+        }
+
+        &:hover,
+        &:focus {
+            &:before {
+                height: 30px;
+                width: 30px;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        i.zmdi {
+            font-size: 14px;
+        }
+    }
+
+
+    &.btn-circle-default {
+        color: $color-dark-light;
+
+        &:before {
+            background-color: $color-light-dark;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-dark-light;
+        }
+    }
+
+    &.btn-circle-white {
+        color: #fff;
+
+        &:before {
+            background-color: #fff;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
+    &.btn-circle-black {
+        color: #000;
+
+        &:before {
+            background-color: $color-light-dark;
+        }
+
+        &:hover,
+        &:focus {
+            color: #000;
+        }
+    }
+
+    &.btn-circle-primary {
+        color: $color-primary;
+
+        &:before {
+            background-color: $color-primary;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-success {
+        color: $color-success;
+
+        &:before {
+            background-color: $color-success;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-info {
+        color: $color-info;
+
+        &:before {
+            background-color: $color-info;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-warning {
+        color: $color-warning;
+
+        &:before {
+            background-color: $color-warning;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-danger {
+        color: $color-danger;
+
+        &:before {
+            background-color: $color-danger;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-royal {
+        color: $color-royal;
+
+        &:before {
+            background-color: $color-royal;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-facebook {
+        color: $color-facebook;
+
+        &:before {
+            background-color: $color-facebook;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-twitter {
+        color: $color-twitter;
+
+        &:before {
+            background-color: $color-twitter;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-google {
+        color: $color-googleplus;
+
+        &:before {
+            background-color: $color-googleplus;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-rss {
+        color: $color-rss;
+
+        &:before {
+            background-color: $color-rss;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-youtube {
+        color: $color-youtube;
+
+        &:before {
+            background-color: $color-youtube;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-linkedin {
+        color: $color-linkedin;
+
+        &:before {
+            background-color: $color-linkedin;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-instagram {
+        color: $color-instagram;
+
+        &:before {
+            background-color: $color-instagram;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-pinterest {
+        color: $color-pinterest;
+
+        &:before {
+            background-color: $color-pinterest;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-wordpress {
+        color: $color-wordpress;
+
+        &:before {
+            background-color: $color-wordpress;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-git {
+        color: $color-git;
+
+        &:before {
+            background-color: $color-git;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-github {
+        color: $color-github;
+
+        &:before {
+            background-color: $color-github;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-flickr {
+        color: $color-flickr;
+
+        &:before {
+            background-color: $color-flickr;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-vine {
+        color: $color-vine;
+
+        &:before {
+            background-color: $color-vine;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-dribbble {
+        color: $color-dribbble;
+
+        &:before {
+            background-color: $color-dribbble;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-foursquare {
+        color: $color-foursquare;
+
+        &:before {
+            background-color: $color-foursquare;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-tumblr {
+        color: $color-tumblr;
+
+        &:before {
+            background-color: $color-tumblr;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-vk {
+        color: $color-vk;
+
+        &:before {
+            background-color: $color-vk;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-reddit {
+        color: $color-reddit;
+
+        &:before {
+            background-color: $color-reddit;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-whatsapp {
+        color: $color-whatsapp;
+
+        &:before {
+            background-color: $color-whatsapp;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-soundcloud {
+        color: $color-soundcloud;
+
+        &:before {
+            background-color: $color-soundcloud;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-dropbox {
+        color: $color-dropbox;
+
+        &:before {
+            background-color: $color-dropbox;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-vimeo {
+        color: $color-vimeo;
+
+        &:before {
+            background-color: $color-vimeo;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-slack {
+        color: $color-slack;
+
+        &:before {
+            background-color: $color-slack;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-skype {
+        color: $color-skype;
+
+        &:before {
+            background-color: $color-skype;
+        }
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-circle-raised {
+        @include shadow-2dp();
+        color: #fff;
+
+        &.btn-circle-default {
+            background-color: $color-light-dark;
+            color: rgba(0,0,0, 0.87);
+
+            &:before {
+                background-color: darken($color-light-dark, 5%);
+            }
+        }
+
+        &.btn-circle-white {
+            background-color: #fff !important;
+            color: $color-primary;
+
+            &:before {
+                background-color: darken(#fff, 5%) !important;
+            }
+
+            &.btn-circle-primary {
+                color: $color-primary;
+            }
+
+            &.btn-circle-success {
+                color: $color-success;
+            }
+
+            &.btn-circle-default {
+                color: #000;
+            }
+
+            &.btn-circle-info {
+                color: $color-info;
+            }
+
+            &.btn-circle-warning {
+                color: $color-warning;
+            }
+
+            &.btn-circle-danger {
+                color: $color-danger;
+            }
+
+            &.btn-circle-royal {
+                color: $color-royal;
+            }
+        }
+
+        &.btn-circle-primary {
+            background-color: $color-primary;
+
+            &:before {
+                background-color: darken($color-primary, 5%);
+            }
+        }
+
+        &.btn-circle-info {
+            background-color: $color-info;
+
+            &:before {
+                background-color: darken($color-info, 5%);
+            }
+        }
+
+        &.btn-circle-success {
+            background-color: $color-success;
+
+            &:before {
+                background-color: darken($color-success, 5%);
+            }
+        }
+
+        &.btn-circle-warning {
+            background-color: $color-warning;
+
+            &:before {
+                background-color: darken($color-warning, 5%);
+            }
+        }
+
+        &.btn-circle-royal {
+            background-color: $color-royal;
+
+            &:before {
+                background-color: darken($color-royal, 5%);
+            }
+        }
+
+        &.btn-circle-danger {
+            background-color: $color-danger;
+
+            &:before {
+                background-color: darken($color-danger, 5%);
+            }
+        }
+
+        &.btn-facebook {
+            background-color: $color-facebook;
+
+            &:before {
+                background-color: darken($color-facebook, 5%);
+            }
+        }
+
+        &.btn-twitter {
+            background-color: $color-twitter;
+
+            &:before {
+                background-color: darken($color-twitter, 5%);
+            }
+        }
+
+        &.btn-google {
+            background-color: $color-googleplus;
+
+            &:before {
+                background-color: darken($color-googleplus, 5%);
+            }
+        }
+
+        &.btn-rss {
+            background-color: $color-rss;
+
+            &:before {
+                background-color: darken($color-rss, 5%);
+            }
+        }
+
+        &.btn-youtube {
+            background-color: $color-youtube;
+
+            &:before {
+                background-color: darken($color-youtube, 5%);
+            }
+        }
+
+        &.btn-linkedin {
+            background-color: $color-linkedin;
+
+            &:before {
+                background-color: darken($color-linkedin, 5%);
+            }
+        }
+
+        &.btn-instagram {
+            background-color: $color-instagram;
+
+            &:before {
+                background-color: darken($color-instagram, 5%);
+            }
+        }
+
+        &.btn-pinterest {
+            background-color: $color-pinterest;
+
+            &:before {
+                background-color: darken($color-pinterest, 5%);
+            }
+        }
+
+        &.btn-wordpress {
+            background-color: $color-wordpress;
+
+            &:before {
+                background-color: darken($color-wordpress, 5%);
+            }
+        }
+
+        &.btn-git {
+            background-color: $color-git;
+
+            &:before {
+                background-color: darken($color-git, 5%);
+            }
+        }
+
+        &.btn-github {
+            background-color: $color-github;
+
+            &:before {
+                background-color: darken($color-github, 5%);
+            }
+        }
+
+        &.btn-flickr {
+            background-color: $color-flickr;
+
+            &:before {
+                background-color: darken($color-flickr, 5%);
+            }
+        }
+
+        &.btn-vine {
+            background-color: $color-vine;
+
+            &:before {
+                background-color: darken($color-vine, 5%);
+            }
+        }
+
+        &.btn-dribbble {
+            background-color: $color-dribbble;
+
+            &:before {
+                background-color: darken($color-dribbble, 5%);
+            }
+        }
+
+        &.btn-foursquare {
+            background-color: $color-foursquare;
+
+            &:before {
+                background-color: darken($color-foursquare, 5%);
+            }
+        }
+
+        &.btn-tumblr {
+            background-color: $color-tumblr;
+
+            &:before {
+                background-color: darken($color-tumblr, 5%);
+            }
+        }
+
+        &.btn-vk {
+            background-color: $color-vk;
+
+            &:before {
+                background-color: darken($color-vk, 5%);
+            }
+        }
+
+        &.btn-reddit {
+            background-color: $color-reddit;
+
+            &:before {
+                background-color: darken($color-reddit, 5%);
+            }
+        }
+
+        &.btn-whatsapp {
+            background-color: $color-whatsapp;
+
+            &:before {
+                background-color: darken($color-whatsapp, 5%);
+            }
+        }
+
+        &.btn-soundcloud {
+            background-color: $color-soundcloud;
+
+            &:before {
+                background-color: darken($color-soundcloud, 5%);
+            }
+        }
+
+        &.btn-dropbox {
+            background-color: $color-dropbox;
+
+            &:before {
+                background-color: darken($color-dropbox, 5%);
+            }
+        }
+
+        &.btn-vimeo {
+            background-color: $color-vimeo;
+
+            &:before {
+                background-color: darken($color-vimeo, 5%);
+            }
+        }
+
+        &.btn-slack {
+            background-color: $color-slack;
+
+            &:before {
+                background-color: darken($color-slack, 5%);
+            }
+        }
+
+        &.btn-skype {
+            background-color: $color-skype;
+
+            &:before {
+                background-color: darken($color-skype, 5%);
+            }
+        }
+    }
+}
+
+.dropdown-toggle {
+    border-radius: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}

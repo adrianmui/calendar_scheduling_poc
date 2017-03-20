@@ -1,0 +1,517 @@
+.ms-header {
+    min-height: 100px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+
+
+    .ms-title {
+        padding-top: 0;
+        display: inline-block;
+
+        img {
+            margin: 15px 20px 0 0;
+        }
+
+        .ms-logo {
+            margin-top: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        h1 {
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 300;
+            word-spacing: -6px;
+            font-size: 32px;
+            padding-top: 0px;
+            margin-top: 35px;
+            color: #717171;
+
+            span {
+                font-weight: 400;
+
+            }
+        }
+    }
+
+    .header-right {
+        //height: 50px;
+        margin-top: 25px;
+        //display: inline-block;
+        float: right;
+        //position: relative;
+        //height: 40px;
+        //margin-top: 15px;
+        //overflow: hidden;
+
+        .share-menu {
+            display: inline-block;
+
+            .share-menu-button {
+                display: inline-block;
+            }
+
+            .share-menu-list {
+                display: none;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+
+                li {
+                    display: inline-block;
+                }
+            }
+
+            &:focus,
+            &:hover {
+                .share-menu-list {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .btn-ms-menu {
+            i {
+                font-size: 2.1rem;
+                margin-top: -2px;
+                //padding: 8px 10px 12px 10px;
+            }
+        }
+
+        .search-form {
+            vertical-align: top;
+            display: inline-block;
+            position: relative;
+            height: 50px;
+            min-width: 50px;
+            padding: 0;
+            margin: 0;
+            transition: width ease 1s;
+            z-index: 0;
+
+            #search-submit {
+                position: relative;
+                left: -5000px;
+                width: 0;
+                padding: 0;
+                border: 0;
+                height: 0;
+            }
+
+            label {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 20px;
+                color: $color-primary;
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 3;
+                transition: transform ease .5s;
+                transition-delay: .2s;
+
+                &:before {
+                    transition: all ease 0.5s;
+                    border-radius: 150px;
+                    z-index: -1;
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-color: $color-primary;
+
+                    height: 0px;
+                    width: 0px;
+                    top: 25px;
+                    left: 25px;
+                }
+
+                &:hover {
+                    color: #fff;
+
+                    &:before {
+                        //border-radius: 0;
+                        height: 50px;
+                        width: 50px;
+                        top: 0px;
+                        left: 0px;
+                    }
+                }
+            }
+
+            .search-input {
+                height: 50px;
+                border: 0;
+                width: 0px;
+                padding: 0;
+                background-color: transparent;
+                display: inline-block;
+                transition: width ease 0.5s;
+                vertical-align: top;
+                //margin-left: -50px;
+                padding-left: 50px;
+                border-radius: $color-dark-light;
+                //font-weight: 400;
+                color: #000;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                  color: rgba(0, 0, 0, .3);
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                  color: rgba(0, 0, 0, .3);
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                  color: rgba(0, 0, 0, .3);
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                  color: rgba(0, 0, 0, .3);
+                }
+
+                &:focus {
+                    width: 250px;
+                    border-bottom: solid 3px $color-primary;
+                    border-radius: 0;
+                    & + label {
+                        transform: ScaleX(-1);
+                        color: $color-primary;
+                        &:before {
+                            transition: none;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.ms-header-dark {
+        background-color: $color-dark;
+        color: #fff;
+
+        .ms-title {
+            h1 {
+                color: #fff;
+            }
+        }
+
+        .search-form {
+
+            label {
+                color: #fff;
+
+                &:before {
+                    background-color: $color-primary;
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            .search-input {
+                color: #fff;
+                font-weight: 400;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &:-webkit-autofill {
+                    -webkit-text-fill-color: #fff !important;
+                }
+
+                &:focus {
+                    border-bottom: solid 3px $color-primary;
+                    & + label {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .btn-circle-primary {
+            color: #fff;
+
+            &:before {
+                background-color: $color-primary;
+            }
+
+            &:hover,
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+
+    &.ms-header-primary {
+        background-color: $color-primary;
+        color: #fff;
+
+        .btn-circle {
+            color: #fff;
+
+            &:before {
+                background-color: #fff;
+            }
+
+            &:hover,
+            &:focus {
+                color: $color-primary;
+            }
+
+            &.no-focus {
+                &:focus {
+                    color: #fff;
+                    &:before {
+                        height: 0px;
+                        width: 0px;
+                        top: 25px;
+                        left: 25px;
+                    }
+                }
+
+                &:hover {
+                    color: $color-primary;
+                    &:before {
+                        height: 50px;
+                        width: 50px;
+                        top: 0px;
+                        left: 0px;
+                    }
+                }
+            }
+        }
+
+        .ms-title {
+            h1 {
+                color: #fff;
+            }
+        }
+
+        .ms-logo {
+            color: $color-primary;
+            background-color: #fff;
+            text-shadow: 1px 1px 0 fade-out($color-primary, 0.96),
+                    1px 2px 0 fade-out($color-primary, 0.96),
+                    1px 3px 0 fade-out($color-primary, 0.96),
+                    2px 4px 0 fade-out($color-primary, 0.96),
+                    3px 5px 0 fade-out($color-primary, 0.96),
+                    4px 6px 0 fade-out($color-primary, 0.96),
+                    5px 7px 0 fade-out($color-primary, 0.96),
+                    6px 8px 0 fade-out($color-primary, 0.96),
+                    7px 9px 0 fade-out($color-primary, 0.96),
+                    8px 10px 0 fade-out($color-primary, 0.96),
+                    9px 11px 0 fade-out($color-primary, 0.96),
+                    10px 12px 0 fade-out($color-primary, 0.96),
+                    11px 13px 0 fade-out($color-primary, 0.96),
+                    12px 14px 0 fade-out($color-primary, 0.96),
+                    13px 15px 0 fade-out($color-primary, 0.96),
+                    14px 16px 0 fade-out($color-primary, 0.96),
+                    15px 17px 0 fade-out($color-primary, 0.96),
+                    16px 18px 0 fade-out($color-primary, 0.96),
+                    17px 19px 0 fade-out($color-primary, 0.96),
+                    18px 20px 0 fade-out($color-primary, 0.96),
+                    19px 21px 0 fade-out($color-primary, 0.96),
+                    20px 22px 0 fade-out($color-primary, 0.96),
+                    21px 23px 0 fade-out($color-primary, 0.96);
+        }
+
+        .search-form {
+
+            label {
+                color: #fff;
+
+                &:before {
+                    background-color: #fff;
+                }
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+
+            .search-input {
+                color: #fff;
+                font-weight: 400;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                  color: rgba(255, 255, 255, .5);
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                  color: rgba(255, 255, 255, .5);
+                }
+
+                &:-webkit-autofill {
+                    -webkit-text-fill-color: #fff !important;
+                }
+
+                &:focus {
+                    border-bottom: solid 3px #fff;
+                    & + label {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ms-logo {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 400;
+    vertical-align: middle;
+    background-color: $color-primary;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.05),
+                1px 2px 0 rgba(0,0,0,.05),
+                1px 3px 0 rgba(0,0,0,.05),
+                2px 4px 0 rgba(0,0,0,.05),
+                3px 5px 0 rgba(0,0,0,.05),
+                4px 6px 0 rgba(0,0,0,.05),
+                5px 7px 0 rgba(0,0,0,.05),
+                6px 8px 0 rgba(0,0,0,.05),
+                7px 9px 0 rgba(0,0,0,.05),
+                8px 10px 0 rgba(0,0,0,.05),
+                9px 11px 0 rgba(0,0,0,.05),
+                10px 12px 0 rgba(0,0,0,.05),
+                11px 13px 0 rgba(0,0,0,.05),
+                12px 14px 0 rgba(0,0,0,.05),
+                13px 15px 0 rgba(0,0,0,.05),
+                14px 16px 0 rgba(0,0,0,.05),
+                15px 17px 0 rgba(0,0,0,.05),
+                16px 18px 0 rgba(0,0,0,.05),
+                17px 19px 0 rgba(0,0,0,.05),
+                18px 20px 0 rgba(0,0,0,.05),
+                19px 21px 0 rgba(0,0,0,.05),
+                20px 22px 0 rgba(0,0,0,.05),
+                21px 23px 0 rgba(0,0,0,.05);
+
+    &.ms-logo-white {
+        color: $color-primary;
+        background-color: #fff;
+        text-shadow: 1px 1px 0 fade-out($color-primary, 0.96),
+                1px 2px 0 fade-out($color-primary, 0.96),
+                1px 3px 0 fade-out($color-primary, 0.96),
+                2px 4px 0 fade-out($color-primary, 0.96),
+                3px 5px 0 fade-out($color-primary, 0.96),
+                4px 6px 0 fade-out($color-primary, 0.96),
+                5px 7px 0 fade-out($color-primary, 0.96),
+                6px 8px 0 fade-out($color-primary, 0.96),
+                7px 9px 0 fade-out($color-primary, 0.96),
+                8px 10px 0 fade-out($color-primary, 0.96),
+                9px 11px 0 fade-out($color-primary, 0.96),
+                10px 12px 0 fade-out($color-primary, 0.96),
+                11px 13px 0 fade-out($color-primary, 0.96),
+                12px 14px 0 fade-out($color-primary, 0.96),
+                13px 15px 0 fade-out($color-primary, 0.96),
+                14px 16px 0 fade-out($color-primary, 0.96),
+                15px 17px 0 fade-out($color-primary, 0.96),
+                16px 18px 0 fade-out($color-primary, 0.96),
+                17px 19px 0 fade-out($color-primary, 0.96),
+                18px 20px 0 fade-out($color-primary, 0.96),
+                19px 21px 0 fade-out($color-primary, 0.96),
+                20px 22px 0 fade-out($color-primary, 0.96),
+                21px 23px 0 fade-out($color-primary, 0.96);
+    }
+
+    &.ms-logo-sm {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        font-size: 18px;
+    }
+
+    &.ms-logo-lg {
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+        font-size: 36px;
+    }
+}
+
+.ms-navbar {
+    .ms-logo {
+        color: $color-primary;
+        background-color: #fff;
+        text-shadow: 1px 1px 0 fade-out($color-primary, 0.96),
+                1px 2px 0 fade-out($color-primary, 0.96),
+                1px 3px 0 fade-out($color-primary, 0.96),
+                2px 4px 0 fade-out($color-primary, 0.96),
+                3px 5px 0 fade-out($color-primary, 0.96),
+                4px 6px 0 fade-out($color-primary, 0.96),
+                5px 7px 0 fade-out($color-primary, 0.96),
+                6px 8px 0 fade-out($color-primary, 0.96),
+                7px 9px 0 fade-out($color-primary, 0.96),
+                8px 10px 0 fade-out($color-primary, 0.96),
+                9px 11px 0 fade-out($color-primary, 0.96),
+                10px 12px 0 fade-out($color-primary, 0.96),
+                11px 13px 0 fade-out($color-primary, 0.96),
+                12px 14px 0 fade-out($color-primary, 0.96),
+                13px 15px 0 fade-out($color-primary, 0.96),
+                14px 16px 0 fade-out($color-primary, 0.96),
+                15px 17px 0 fade-out($color-primary, 0.96),
+                16px 18px 0 fade-out($color-primary, 0.96),
+                17px 19px 0 fade-out($color-primary, 0.96),
+                18px 20px 0 fade-out($color-primary, 0.96),
+                19px 21px 0 fade-out($color-primary, 0.96),
+                20px 22px 0 fade-out($color-primary, 0.96),
+                21px 23px 0 fade-out($color-primary, 0.96);
+    }
+
+    &.ms-navbar-white,
+    &.ms-navbar-dark {
+        .ms-logo {
+            color: #fff;
+            background-color: $color-primary;
+            text-shadow: 1px 1px 0 rgba(0,0,0,.05),
+                1px 2px 0 rgba(0,0,0,.05),
+                1px 3px 0 rgba(0,0,0,.05),
+                2px 4px 0 rgba(0,0,0,.05),
+                3px 5px 0 rgba(0,0,0,.05),
+                4px 6px 0 rgba(0,0,0,.05),
+                5px 7px 0 rgba(0,0,0,.05),
+                6px 8px 0 rgba(0,0,0,.05),
+                7px 9px 0 rgba(0,0,0,.05),
+                8px 10px 0 rgba(0,0,0,.05),
+                9px 11px 0 rgba(0,0,0,.05),
+                10px 12px 0 rgba(0,0,0,.05),
+                11px 13px 0 rgba(0,0,0,.05),
+                12px 14px 0 rgba(0,0,0,.05),
+                13px 15px 0 rgba(0,0,0,.05),
+                14px 16px 0 rgba(0,0,0,.05),
+                15px 17px 0 rgba(0,0,0,.05),
+                16px 18px 0 rgba(0,0,0,.05),
+                17px 19px 0 rgba(0,0,0,.05),
+                18px 20px 0 rgba(0,0,0,.05),
+                19px 21px 0 rgba(0,0,0,.05),
+                20px 22px 0 rgba(0,0,0,.05),
+                21px 23px 0 rgba(0,0,0,.05);
+        }
+    }
+}

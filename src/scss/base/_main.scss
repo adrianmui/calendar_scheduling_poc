@@ -1,0 +1,240 @@
+// -----------------------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------------------
+
+/////// ONLY FOR DEVELOPER ///////
+* {                             //
+    //animation: none !important; //
+}                               //
+/////// ONLY FOR DEVELOPER ///////
+
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    //-webkit-text-stroke-width: .5px;
+}
+
+body {
+    color: $mdc-grey-600;
+    background-color: $color-light;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highcolor-light: rgba(0, 0, 0, 0);
+
+    &.bd-scroll {
+        padding-top: 50px;
+    }
+
+    .sb-site-container {
+        transform: none;
+        background-color: $color-light;
+        min-height: 0;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Reset Styles
+// -----------------------------------------------------------------------------
+
+input:-webkit-autofill {
+    //s-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+:focus {
+    outline: none !important;
+}
+
+::-moz-focus-inner {
+    border: 0 !important;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    transition: background-color 50000s ease-in-out 0s !important;
+
+}
+
+iframe {
+    border: 0;
+    display: table;
+}
+
+// -----------------------------------------------------------------------------
+// Wraps
+// -----------------------------------------------------------------------------
+
+.material-background {
+    background-color: $color-alt-dark;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all ease 1s;
+
+}
+
+
+.bd-scroll .material-background {
+    height: 800px;
+}
+
+.ms-component-section {
+    margin-bottom: 6rem;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+}
+
+.color-primary {
+    color: $color-primary !important;
+}
+.color-info {
+    color: $color-info !important;
+}
+.color-success {
+    color: $color-success !important;
+}
+.color-warning {
+    color: $color-warning !important;
+}
+.color-danger {
+    color: $color-danger !important;
+}
+.color-royal {
+    color: $color-royal !important;
+}
+
+.color-light {
+    color: $color-light !important;
+}
+
+.color-medium {
+    color: $color-medium !important;
+}
+
+.color-dark {
+    color: $color-dark !important;
+}
+
+.bg-primary {
+    background-color: $color-primary !important;
+    color: #fff;
+}
+
+.bg-primary-dark {
+    background-color: $color-primary-dark !important;
+    color: #fff;
+}
+
+.bg-primary-light {
+    background-color: $color-primary-light !important;
+    color: #fff;
+}
+
+.bg-info {
+    background-color: $color-info !important;
+    color: #fff;
+}
+
+.bg-success {
+    background-color: $color-success !important;
+    color: #fff;
+}
+
+.bg-warning {
+    background-color: $color-warning !important;
+    color: #fff;
+}
+
+.bg-danger {
+    background-color: $color-danger !important;
+    color: #fff;
+}
+
+.bg-royal {
+    background-color: $color-royal !important;
+    color: #fff;
+}
+
+.bg-light {
+    background-color: $color-light;
+}
+
+.bg-medium {
+    background-color: $color-medium;
+}
+
+.bg-dark {
+    background-color: $color-dark;
+    color: #fff;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.color-dark {
+    li {
+        a {
+            color: $color-dark;
+
+            &:hover,
+            &:focus {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.ms-site-title {
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 200;
+    word-spacing: -4px;
+
+    span {
+        font-weight: 300;
+    }
+}
+
+.btn-back-top {
+    display: inline-block;
+    position: fixed;
+    left: auto;
+    top: auto;
+    bottom: -100px;
+    right: 20px;
+    z-index: 999999999;
+    transition: all ease 0.5s;
+
+    &.back-show {
+        bottom: 20px;
+    }
+}
+
+.ms-nav-fixed {
+    padding-top: 90px;
+
+    .ms-navbar {
+        animation: none !important;
+    }
+}

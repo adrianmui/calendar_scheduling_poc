@@ -1,0 +1,500 @@
+.thumbnail-card {
+    padding: 0;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+    border: 0;
+    border-radius: 2px;
+
+    .thumbnail-img-container {
+        overflow: hidden;
+
+        img {
+            transition: all ease 0.5s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .caption {
+        padding: 2rem;
+
+        p {
+            line-height: 2.4rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @each $n, $c in $color-list {
+        &.thumbnail-card-#{$n} {
+            .caption {
+                background-color: $c;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.thumbnail {
+    border-radius: 0;
+}
+
+a.thumbnail {
+    border-radius: 0;
+    color: $color-primary;
+
+    .thumbnail-container {
+        overflow: hidden;
+
+        img {
+            transition: all ease 0.7s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    &:hover,
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
+.ms-thumbnail-container {
+    border: solid 1px $color-light-dark;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.ms-thumbnail {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: relative;
+        z-index: 0;
+        transition: all ease 1s;
+        width: 100%;
+    }
+
+    .ms-thumbnail-caption {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: -100%;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparentize(darken($color-primary-dark, 15%), 0.4);
+        //opacity: 0;
+        padding: 0rem;
+        color: #fff;
+        transition: all ease 0.5s;
+        -webkit-backface-visibility: hidden;
+
+        &:before {
+            content: "";
+            display: block;
+            background-color: transparentize(darken($color-primary-dark, 15%), 0.4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 200%;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: all ease 0.5s;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .ms-thumbnail-caption-content {
+            transform: translateY(-100%);
+            transition: all ease .6s;
+            -webkit-backface-visibility: hidden;
+            padding: 2rem;
+            //height: 100%;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+
+            .ms-thumbnail-caption-title {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            transform: scale(1.1);
+        }
+        .ms-thumbnail-caption {
+            top: 0;
+            opacity: 1;
+
+            &:before {
+                top: 0;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &.ms-thumbnail-horizontal {
+        .ms-thumbnail-caption {
+            top: 0;
+            right: 100%;
+            left: auto;
+
+            &:before {
+                top: 0;
+                right: -200%;
+                left: auto;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%) translateX(-100%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                top: 0;
+                right: 0;
+                left: auto;
+
+                &:before {
+                    top: 0;
+                    right: 0;
+                    left: auto;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-bottom {
+        .ms-thumbnail-caption {
+            top: 100%;
+
+            &:before {
+                top: 100%;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                top: 0;
+
+                &:before {
+                    transition-delay: .25s;
+                    top: 0;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-top {
+        .ms-thumbnail-caption {
+            bottom: 100%;
+            top: auto;
+
+            &:before {
+                bottom: 100%;
+                top: auto;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                bottom: 0;
+                top: auto;
+
+                &:before {
+                    transition-delay: .25s;
+                    bottom: 0;
+                    top: auto;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-right {
+        .ms-thumbnail-caption {
+            left: 100%;
+            top: auto;
+
+            &:before {
+                left: 100%;
+                top: auto;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                left: 0;
+                top: auto;
+
+                &:before {
+                    transition-delay: .25s;
+                    left: 0;
+                    top: auto;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-left {
+        .ms-thumbnail-caption {
+            right: 100%;
+            left: auto;
+            top: auto;
+
+            &:before {
+                right: 100%;
+                left: auto;
+                top: auto;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                right: 0;
+                left: auto;
+                top: auto;
+
+                &:before {
+                    transition-delay: .25s;
+                    right: 0;
+                    left: auto;
+                    top: auto;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+
+    &.ms-thumbnail-diagonal {
+        .ms-thumbnail-caption {
+            right: 100%;
+            left: auto;
+
+            &:before {
+                right: -200%;
+                left: auto;
+            }
+
+            .ms-thumbnail-caption-content {
+                transform: translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                right: 0;
+                left: auto;
+
+                &:before {
+                    right: 0;
+                    left: auto;
+                }
+
+                .ms-thumbnail-caption-content {
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-center {
+        .ms-thumbnail-caption {
+            left: 50%;
+            right: auto;
+            top: 50%;
+            bottom: auto;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            transition-delay: .3s;
+
+            &:before {
+                left: 50%;
+                right: auto;
+                top: 50%;
+                bottom: auto;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                transition-delay: .2s;
+            }
+
+            .ms-thumbnail-caption-content {
+                opacity: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            .ms-thumbnail-caption {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transition-delay: 0s;
+
+                &:before {
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .ms-thumbnail-caption-content {
+                    opacity: 1;
+                    transition-delay: .5s;
+                }
+            }
+        }
+    }
+
+    &.ms-thumbnail-danger {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-danger-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-danger-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-danger {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-danger-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-danger-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-success {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-success-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-success-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-warning {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-warning-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-warning-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-royal {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-royal-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-royal-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-info {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-info-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-info-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-dark {
+        .ms-thumbnail-caption {
+
+            background-color: transparentize(darken($color-dark, 15%), 0.4);
+
+            &:before {
+                background-color: transparentize(darken($color-dark, 15%), 0.4);
+            }
+        }
+    }
+
+    &.ms-thumbnail-light {
+        .ms-thumbnail-caption {
+            color: $color-dark;
+            background-color: transparentize(#fff, 0.4);
+
+            &:before {
+                background-color: transparentize(#fff, 0.4);
+            }
+        }
+    }
+}

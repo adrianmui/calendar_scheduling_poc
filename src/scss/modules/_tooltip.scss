@@ -1,0 +1,45 @@
+.tooltip-primary {
+    & + .tooltip .tooltip-inner  {
+        background-color: $color-primary;
+    }
+}
+
+@each $n, $c in $color-list {
+    .tooltip-#{$n} {
+        & + .tooltip .tooltip-inner  {
+            background-color: $c;
+        }
+    }
+}
+
+.tooltip-light {
+    & + .tooltip .tooltip-inner  {
+        color: $color-dark;
+    }
+}
+
+.popover {
+    line-height: 2.1rem;
+    background-color: #fff;
+    color: $color-dark;
+    border: none !important;
+    padding: 0;
+
+    .popover-title {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        font-size: 17px;
+        font-weight: 400;
+        padding: 15px 15px 15px 15px;
+        margin: 0;
+        background-color: $color-primary;
+        color: #fff;
+    }
+
+    .tooltip-inner {
+        border: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}

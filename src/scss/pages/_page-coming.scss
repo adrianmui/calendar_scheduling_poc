@@ -1,0 +1,39 @@
+.coming-date {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    margin: 3rem auto;
+    text-align: center;
+
+
+    li {
+        //float: left;
+        display: inline-block;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 300;
+        margin: 5px 10px 0;
+
+        span {
+            display: block;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        &.colon {
+            vertical-align: top;
+        }
+
+        &:last-child {
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .coming-date {
+        li {
+            margin: 5px 5px 0;
+        }
+    }
+}

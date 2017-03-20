@@ -16,6 +16,30 @@
     "request": "^2.81.0",
     "angular": "^1.6.3"
   },
+   "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-beautify": "^2.0.1",
+    "gulp-changed": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-prettify": "^0.5.0",
+    "gulp-processhtml": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-themes": "^2.0.1",
+    "gulp-uglify": "^2.0.1",
+    "jshint": "^2.9.4",
+    "merge-stream": "^1.0.1",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/username/repository.git"

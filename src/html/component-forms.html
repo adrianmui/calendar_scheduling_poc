@@ -1,0 +1,346 @@
+<!-- build:include layout/header.html --><!-- /build -->
+
+<div class="material-background"></div>
+
+<div class="container container-full">
+    <div class="ms-paper">
+        <div class="row">
+            <!-- build:componentsMenu component-forms.html --><!-- /build -->
+            <div class="col-md-9 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <h1>Forms</h1>
+                    <section class="ms-component-section">
+                        <h2 class="section-title">Basic Form</h2>
+                        <div class="alert alert-info">
+                            <p><i class="zmdi zmdi-info-outline"></i> This is just a sample of the form fields. You can view completed forms in the <strong>Pages section</strong>.</p>
+                        </div>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <legend>Legend</legend>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-md-2 control-label">Email</label>
+
+                                    <div class="col-md-10">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="col-md-2 control-label">Password</label>
+
+                                    <div class="col-md-10">
+                                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-top: 0;">
+                                    <!-- inline style is just to demo custom css to put checkbox below input above -->
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Checkbox
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" disabled=""> Disabled Checkbox
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <div class="togglebutton">
+                                            <label>
+                                                <input type="checkbox" checked=""> Toggle button
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputFile" class="col-md-2 control-label">File</label>
+
+                                    <div class="col-md-10">
+                                        <input type="text" readonly="" class="form-control" placeholder="Browse...">
+                                        <input type="file" id="inputFile" multiple="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="textArea" class="col-md-2 control-label">Textarea</label>
+
+                                    <div class="col-md-10">
+                                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                                        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Radios</label>
+
+                                    <div class="col-md-10">
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Option one is this
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select111" class="col-md-2 control-label">Select</label>
+
+                                    <div class="col-md-10">
+                                        <select id="select111" class="form-control selectpicker">
+                                            <option>Ea nam qui vel consequatur</option>
+                                            <option>Dolorem perspiciatis adipisci </option>
+                                            <option>Aperiam, debitis deleniti</option>
+                                            <option>Accusamus non qui amet eum</option>
+                                            <option>Doloremque commodi impedit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select222" class="col-md-2 control-label">Select Multiple</label>
+
+                                    <div class="col-md-10">
+                                        <select id="select222" multiple="" class="selectpicker form-control">
+                                            <option>Ea nam qui vel consequatur</option>
+                                            <option>Dolorem perspiciatis adipisci </option>
+                                            <option>Aperiam, debitis deleniti</option>
+                                            <option>Accusamus non qui amet eum</option>
+                                            <option>Doloremque commodi impedit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-2">
+                                        <button type="submit" class="btn btn-raised btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger">Cancel</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div class="panel panel-info panel-code">
+                            <div class="panel-heading panel-code-heading" role="tab" id="codeHead1">
+                                <h4 class="panel-title panel-code-title">
+                                    <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code1" aria-expanded="false" aria-controls="code1">
+                                        <i class="zmdi zmdi-code"></i> Show Code
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="code1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead1">
+                                <div class="panel-code-body">
+<pre><code class="language-markup line-numbers">&lt;form class=&quot;form-horizontal&quot;&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Legend&lt;/legend&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;inputEmail&quot; class=&quot;col-md-2 control-label&quot;&gt;Email&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail&quot; placeholder=&quot;Email&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;inputPassword&quot; class=&quot;col-md-2 control-label&quot;&gt;Password&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword&quot; placeholder=&quot;Password&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot; style=&quot;margin-top: 0;&quot;&gt;
+            &lt;!-- inline style is just to demo custom css to put checkbox below input above --&gt;
+            &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+                &lt;div class=&quot;checkbox&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;checkbox&quot;&gt; Checkbox
+                    &lt;/label&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;checkbox&quot; disabled=&quot;&quot;&gt; Disabled Checkbox
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+                &lt;div class=&quot;togglebutton&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;checkbox&quot; checked=&quot;&quot;&gt; Toggle button
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;inputFile&quot; class=&quot;col-md-2 control-label&quot;&gt;File&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;input type=&quot;text&quot; readonly=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;Browse...&quot;&gt;
+                &lt;input type=&quot;file&quot; id=&quot;inputFile&quot; multiple=&quot;&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;textArea&quot; class=&quot;col-md-2 control-label&quot;&gt;Textarea&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot; id=&quot;textArea&quot;&gt;&lt;/textarea&gt;
+                &lt;span class=&quot;help-block&quot;&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-md-2 control-label&quot;&gt;Radios&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;div class=&quot;radio radio-primary&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked=&quot;&quot;&gt; Option one is this
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;radio radio-primary&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt; Option two can be something else
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;select111&quot; class=&quot;col-md-2 control-label&quot;&gt;Select&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;select id=&quot;select111&quot; class=&quot;form-control selectpicker&quot;&gt;
+                    &lt;option&gt;Ea nam qui vel consequatur&lt;/option&gt;
+                    &lt;option&gt;Dolorem perspiciatis adipisci &lt;/option&gt;
+                    &lt;option&gt;Aperiam, debitis deleniti&lt;/option&gt;
+                    &lt;option&gt;Accusamus non qui amet eum&lt;/option&gt;
+                    &lt;option&gt;Doloremque commodi impedit&lt;/option&gt;
+                        &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label for=&quot;select222&quot; class=&quot;col-md-2 control-label&quot;&gt;Select Multiple&lt;/label&gt;
+
+            &lt;div class=&quot;col-md-10&quot;&gt;
+                &lt;select id=&quot;select222&quot; multiple=&quot;&quot; class=&quot;selectpicker form-control&quot;&gt;
+                    &lt;option&gt;Ea nam qui vel consequatur&lt;/option&gt;
+                    &lt;option&gt;Dolorem perspiciatis adipisci &lt;/option&gt;
+                    &lt;option&gt;Aperiam, debitis deleniti&lt;/option&gt;
+                    &lt;option&gt;Accusamus non qui amet eum&lt;/option&gt;
+                    &lt;option&gt;Doloremque commodi impedit&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-10 col-md-offset-2&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-raised btn-primary&quot;&gt;Submit&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Cancel&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+                                </div>
+                            </div>
+                        </div> <!-- panel-code -->
+                    </section>
+                    <section class="ms-component-section">
+                        <h2 class="section-title">More Options</h2>
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="focusedInput1">Write something to make the label float</label>
+                            <input class="form-control" id="focusedInput1" type="text">
+                        </div>
+
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="focusedInput2">Focus to show the help-block</label>
+                            <input class="form-control" id="focusedInput2" type="text">
+                            <p class="help-block">You should really write something here</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="disabledInput">Disabled input</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                        </div>
+
+                        <div class="form-group has-warning">
+                            <label class="control-label" for="inputWarning">Input warning</label>
+                            <input type="text" class="form-control" id="inputWarning">
+                        </div>
+
+                        <div class="form-group has-error">
+                            <label class="control-label" for="inputError">Input error</label>
+                            <input type="text" class="form-control" id="inputError">
+                        </div>
+
+                        <div class="form-group has-success">
+                            <label class="control-label" for="inputSuccess">Input success</label>
+                            <input type="text" class="form-control" id="inputSuccess">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputLarge">Large input</label>
+                            <input class="form-control input-lg" type="text" id="inputLarge">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputDefault">Default input</label>
+                            <input type="text" class="form-control" id="inputDefault">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="inputSmall">Small input</label>
+                            <input class="form-control input-sm" type="text" id="inputSmall">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="addon1">Default label w/input addons</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" id="addon1" class="form-control">
+                                <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Button</button>
+                            </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group label-floating">
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <label class="control-label" for="addon3a">Floating label w/2 addons</label>
+                                <input type="text" id="addon3a" class="form-control">
+                                <p class="help-block">The label is inside the <code>input-group</code> so that it is positioned properly as a placeholder.</p>
+                                <span class="input-group-btn">
+                              <button type="button" class="btn btn-fab btn-fab-mini">
+                                <i class="material-icons">send</i>
+                              </button>
+                            </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group label-floating">
+
+                            <label class="control-label" for="addon2">Floating label w/right addon</label>
+                            <div class="input-group">
+                                <input type="text" id="addon2" class="form-control">
+                                <span class="input-group-btn">
+                              <button type="button" class="btn btn-fab btn-fab-mini">
+                                <i class="material-icons">functions</i>
+                              </button>
+                            </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="file" id="inputFile4" multiple="">
+                            <div class="input-group">
+                                <input type="text" readonly="" class="form-control" placeholder="Placeholder w/file chooser...">
+                                <span class="input-group-btn input-group-sm">
+                                <button type="button" class="btn btn-fab btn-fab-mini">
+                                  <i class="material-icons">attach_file</i>
+                                </button>
+                              </span>
+                            </div>
+                        </div>
+                    </section>
+                </div> <!-- ms-paper-content -->
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+    </div> <!-- ms-paper -->
+</div> <!-- container -->
+
+<!-- build:include layout/footer.html --><!-- /build -->
