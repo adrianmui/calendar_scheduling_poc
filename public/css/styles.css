@@ -5,3 +5,17 @@
 .b123 {
     color: #ffffff ;
 }
+
+table, td {
+    border: 1px solid #b0bec5;
+}
+
+th {
+    border: 0px;
+    background-color: #009688;
+    color: #ffffff; 
+    font-size: 15px;
+    padding: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
