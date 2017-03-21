@@ -1,21 +1,26 @@
 .a123 {
-    background-color: #00b0ff ;
+    background-color: #00b0ff;
 }
 
 .b123 {
-    color: #ffffff ;
+    color: #ffffff;
 }
 
-table, td {
+table,
+td {
     border: 1px solid #b0bec5;
 }
 
-th {
+tr.selected:hover {
+    background-color: #039be5 !important;
+}
+
+
+/*th {
     border: 0px;
     background-color: #009688;
     color: #ffffff; 
     font-size: 15px;
     padding: 2px;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-}
-
+}*/

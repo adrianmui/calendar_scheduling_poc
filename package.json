@@ -16,7 +16,7 @@
     "request": "^2.81.0",
     "angular": "^1.6.3"
   },
-   "devDependencies": {
+  "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-beautify": "^2.0.1",
@@ -31,7 +31,7 @@
     "gulp-processhtml": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^2.1.0",
     "gulp-sass-themes": "^2.0.1",
     "gulp-uglify": "^2.0.1",
     "jshint": "^2.9.4",
