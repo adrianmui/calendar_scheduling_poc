@@ -10,7 +10,11 @@ module.exports = function (processor) {
                 {
                     name: '<i class="fa fa-refresh"></i> Recurring',
                     link: 'component-headers.html'
-                }
+                },
+                {
+                    name: '<i class="fa fa-child"></i> Edit example',
+                    link: 'omail-edit.html'
+                },      
             ]
         },
         {

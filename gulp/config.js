@@ -18,7 +18,8 @@ module.exports = {
     folders : {
         dist : 'dist',
         assets: 'assets',
-        plugins: 'plugins'
+        plugins: 'plugins',
+        public: 'public'
     },
 
     plugins : {

@@ -32,8 +32,7 @@ var paths = {
     media : path.join(config.folders.dist, config.folders.assets, 'media'),
     css : path.join(config.folders.dist, config.folders.assets, 'css'),
     img : path.join(config.folders.dist, config.folders.assets, 'img'),
-    plugins : path.join(config.folders.dist, config.folders.assets, config.folders.plugins),
-    revolution : path.join(config.folders.dist, config.folders.assets, config.folders.plugins, 'revolution')
+    plugins : path.join(config.folders.dist, config.folders.assets, config.folders.plugins)
 };
 
 var themeOptions = {
@@ -101,15 +100,6 @@ gulp.task('plugins', function() {
 
     gulp.src(config.plugins.img)
         .pipe(gulp.dest(paths.img));
-});
-
-gulp.task('revolution', function() {
-    gulp.src([
-        './plugins/slider-revolution/revolution/**/*',
-        './plugins/slider-revolution/revolution-addons/**/*',
-        './plugins/slider-revolution/assets/**/*'],
-        {base: './plugins/slider-revolution/'})
-        .pipe(gulp.dest(paths.revolution));
 });
 
 gulp.task('html', function() {
@@ -336,7 +326,8 @@ gulp.task('dist', function() {
     runSequence(
         'clean',
         'themes',
-        ['plugins', 'html:dist', 'js', 'scss', 'img', 'fonts', 'media', 'revolution']
+        ['plugins', 'html:dist', 'js', 'scss', 'img', 'fonts', 'media']
+        //['html:dist', 'js', 'scss', 'img']
     );
 });
 
@@ -348,7 +339,7 @@ gulp.task('demo', function() {
     runSequence(
         'clean',
         'themes',
-        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media', 'revolution']
+        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });
 
@@ -357,7 +348,7 @@ gulp.task('dev', function() {
 
     runSequence(
         'clean',
-        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media', 'revolution']
+        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });
 
@@ -376,6 +367,6 @@ gulp.task('release', function() {
     runSequence(
         'clean',
         'themes',
-        ['plugins', 'html:release', 'js', 'scss', 'img', 'fonts', 'media', 'revolution']
+        ['plugins', 'html:release', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });
