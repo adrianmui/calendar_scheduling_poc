@@ -5,20 +5,29 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp public --color=indigo --shine=600 --header=ms-header-dark --navbar=ms-navbar-primary --navbarMode=true",
     "start": "node server.js"
   },
   "author": "amui",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.0",
+    "angular": "^1.6.3",
     "express": "^4.15.2",
+    "jquery": "^3.2.0",
     "jsdom": "^9.12.0",
-    "request": "^2.81.0",
-    "angular": "^1.6.3"
+    "request": "^2.81.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-beautify": "^2.0.1",
     "gulp-changed": "^2.0.0",
     "gulp-concat": "^2.6.1",

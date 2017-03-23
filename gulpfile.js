@@ -1,38 +1,41 @@
-var gulp =          require('gulp');
-var concat =        require('gulp-concat');
-var connect =       require('gulp-connect');
-var argv =          require('yargs').argv;
-var gulpif =        require('gulp-if');
-var jshint =        require('gulp-jshint');
-var beautify =      require('gulp-beautify');
-var please =        require('gulp-pleeease');
-var rename =        require('gulp-rename');
-var replace =       require('gulp-replace');
-var sass =          require('gulp-sass');
-var sassThemes =    require('gulp-sass-themes');
-var uglify =        require('gulp-uglify');
-var prettify =      require('gulp-prettify');
-var processhtml =   require('gulp-processhtml');
-var del =           require('del');
-var path =          require('path');
-var runSequence =   require('run-sequence').use(gulp);
-var imagemin =      require('gulp-imagemin');
-var changed =       require('gulp-changed');
-var merge =         require('merge-stream');
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var connect = require('gulp-connect');
+var argv = require('yargs').argv;
+var gulpif = require('gulp-if');
+var jshint = require('gulp-jshint');
+var beautify = require('gulp-beautify');
+var please = require('gulp-pleeease');
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
+var sass = require('gulp-sass');
+var sassThemes = require('gulp-sass-themes');
+var uglify = require('gulp-uglify');
+var prettify = require('gulp-prettify');
+var processhtml = require('gulp-processhtml');
+var del = require('del');
+var path = require('path');
+var runSequence = require('run-sequence').use(gulp);
+var imagemin = require('gulp-imagemin');
+var changed = require('gulp-changed');
+var merge = require('merge-stream');
+var babel = require('gulp-babel');
+var glob = require('glob');
+var browserify = require('browserify');
 
-var config =        require('./gulp/config');
+var config = require('./gulp/config');
 
 var paths = {
-    dist : path.join(config.folders.dist),
-    assets : path.join(config.folders.dist, config.folders.assets),
-    html : path.join(config.folders.dist),
-    js : path.join(config.folders.dist, config.folders.assets, 'js'),
-    jsConcat : path.join(config.folders.dist, config.folders.assets, 'js'),
-    fonts : path.join(config.folders.dist, config.folders.assets, 'fonts'),
-    media : path.join(config.folders.dist, config.folders.assets, 'media'),
-    css : path.join(config.folders.dist, config.folders.assets, 'css'),
-    img : path.join(config.folders.dist, config.folders.assets, 'img'),
-    plugins : path.join(config.folders.dist, config.folders.assets, config.folders.plugins)
+    public: path.join(config.folders.public),
+    assets: path.join(config.folders.public, config.folders.assets),
+    html: path.join(config.folders.public),
+    js: path.join(config.folders.public, config.folders.assets, 'js'),
+    jsConcat: path.join(config.folders.public, config.folders.assets, 'js'),
+    fonts: path.join(config.folders.public, config.folders.assets, 'fonts'),
+    media: path.join(config.folders.public, config.folders.assets, 'media'),
+    css: path.join(config.folders.public, config.folders.assets, 'css'),
+    img: path.join(config.folders.public, config.folders.assets, 'img'),
+    plugins: path.join(config.folders.public, config.folders.assets, config.folders.plugins)
 };
 
 var themeOptions = {
@@ -44,8 +47,8 @@ var themeOptions = {
 };
 
 var targets = {
-    dist : {
-        environment: 'dist',
+    public: {
+        environment: 'public',
         data: {
             assets: config.folders.assets,
             primaryColor: themeOptions.primaryColor + '-' + themeOptions.shineColor,
@@ -53,7 +56,7 @@ var targets = {
             navbarClass: themeOptions.navbarClass
         },
     },
-    navbar : {
+    navbar: {
         environment: 'navbar',
         data: {
             assets: config.folders.assets,
@@ -62,7 +65,7 @@ var targets = {
             navbarClass: themeOptions.navbarClass + ' navbar-mode'
         },
     },
-    demo : {
+    demo: {
         environment: 'demo',
         data: {
             assets: config.folders.assets,
@@ -71,7 +74,7 @@ var targets = {
             navbarClass: themeOptions.navbarClass
         },
     },
-    dev : {
+    dev: {
         environment: 'dev',
         data: {
             assets: config.folders.assets,
@@ -116,12 +119,12 @@ gulp.task('html', function() {
                 'gulp/omail-menu.js'
             )]
         }))
-        .pipe(gulpif(config.compress, prettify({indent_size: 2})))
+        .pipe(gulpif(config.compress, prettify({ indent_size: 2 })))
         .pipe(gulp.dest(path.join(paths.html)))
         .pipe(connect.reload());
 });
 
-gulp.task('html:dist', function() {
+gulp.task('html:public', function() {
     gulp.src(['src/html/**/*.html', '!src/html/layout/**/*'])
         .pipe(processhtml({
             recursive: true,
@@ -134,17 +137,17 @@ gulp.task('html:dist', function() {
                 'gulp/omail-menu.js'
             )]
         }))
-        .pipe(gulpif(config.compress, prettify({indent_size: 2})))
+        .pipe(gulpif(config.compress, prettify({ indent_size: 2 })))
         .pipe(gulp.dest(path.join(paths.html)))
         .pipe(connect.reload());
 });
 
 gulp.task('html:release', function() {
     for (var h in config.headers) {
-        targets.dist.data.headerClass = 'ms-' + config.headers[h];
+        targets.public.data.headerClass = 'ms-' + config.headers[h];
 
         for (var n in config.navbars) {
-            targets.dist.data.navbarClass = 'ms-' + config.navbars[n];
+            targets.public.data.navbarClass = 'ms-' + config.navbars[n];
             gulp.src(['src/html/**/*.html', '!src/html/layout/**/*'])
                 .pipe(processhtml({
                     recursive: true,
@@ -157,7 +160,7 @@ gulp.task('html:release', function() {
                         'gulp/omail-menu.js'
                     )]
                 }))
-                .pipe(prettify({indent_size: 2}))
+                .pipe(prettify({ indent_size: 2 }))
                 .pipe(gulp.dest(paths.html + '/' + config.headers[h] + '-' + config.navbars[n]))
                 .pipe(connect.reload());
         }
@@ -178,7 +181,7 @@ gulp.task('html:release', function() {
                     'gulp/omail-menu.js'
                 )]
             }))
-            .pipe(prettify({indent_size: 2}))
+            .pipe(prettify({ indent_size: 2 }))
             .pipe(gulp.dest(path.join(paths.html, config.navbars[nav])))
             .pipe(connect.reload());
     }
@@ -240,23 +243,23 @@ function generateNames() {
 }
 
 
-gulp.task('scss', function () {
-  gulp.src('src/scss/**/*.scss')
-    .pipe(gulpif(config.allColors, sassThemes('src/scss/themes/_*.scss', generateNames())))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(config.compress, please({
-        "autoprefixer": true,
-        "filters": true,
-        "rem": true,
-        "opacity": true
-    })))
-    .pipe(gulpif(config.compress, rename({
-        suffix: '.min',
-        extname: '.css'
-    })))
-    //.pipe(gulpif(!config.compress, rename('style.' + config.defaultTheme + '.min.css')))
-    .pipe(gulp.dest(paths.css))
-    .pipe(connect.reload());
+gulp.task('scss', function() {
+    gulp.src('src/scss/**/*.scss')
+        .pipe(gulpif(config.allColors, sassThemes('src/scss/themes/_*.scss', generateNames())))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulpif(config.compress, please({
+            "autoprefixer": true,
+            "filters": true,
+            "rem": true,
+            "opacity": true
+        })))
+        .pipe(gulpif(config.compress, rename({
+            suffix: '.min',
+            extname: '.css'
+        })))
+        //.pipe(gulpif(!config.compress, rename('style.' + config.defaultTheme + '.min.css')))
+        .pipe(gulp.dest(paths.css))
+        .pipe(connect.reload());
 });
 
 gulp.task('img', function() {
@@ -280,14 +283,14 @@ gulp.task('media', function() {
 
 gulp.task('clean', function() {
     return del.sync([
-        paths.dist,
+        paths.public,
         'src/scss/themes/*'
     ]);
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     gulp.watch(['src/html/**/*'], ['html']);
-    gulp.watch(['src/html/layout/**/*'], ['html:dist']);
+    gulp.watch(['src/html/layout/**/*'], ['html:public']);
     gulp.watch(['src/js/**/*'], ['js']);
     gulp.watch(['src/scss/**/*'], ['scss']);
     gulp.watch(['src/img/**/*'], ['img']);
@@ -297,7 +300,7 @@ gulp.task('watch', function () {
 
 gulp.task('connect', function() {
     connect.server({
-        root: config.folders.dist,
+        root: config.folders.public,
         port: 8080,
         livereload: true
     });
@@ -309,25 +312,54 @@ gulp.task('default', function() {
     );
 });
 
+// !ONGOING
+gulp.task('babelify', () => {
+    return gulp.src(["src/js/**.js", "src/js/controllers/**.js", "src/js/services/**.js"])
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest(path.join(paths.html)))
+        .pipe(connect.reload());
+});
 
-gulp.task('dist', function() {
+// !ONGOING
+gulp.task('browserify', () => {
+    var controllers = glob.sync('src/js/controllers/**.js');
+    var services = glob.sync('src/js/services/**.js');
+    var misc = glob.sync('src/js/**.js');
+    var javascripts = [].concat(controllers, services, misc);
+    var b = browserify({
+        debug: true,
+        entries: javascripts,
+        extensions: ['.js']
+    });
+
+    b.bundle()
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest(path.join(paths.html, 'app.js')))
+        .pipe(connect.reload());
+
+});
+
+gulp.task('public', function() {
     config.compress = true;
-    config.environment = 'dist';
+    config.environment = 'public';
     config.allColors = true;
 
     config.themes = [themeOptions.primaryColor];
     config.shines = [themeOptions.shineColor];
 
 
-    if(themeOptions.navbarMode) {
+    if (themeOptions.navbarMode) {
         config.environment = 'navbar';
     }
 
     runSequence(
         'clean',
-        'themes',
-        ['plugins', 'html:dist', 'js', 'scss', 'img', 'fonts', 'media']
-        //['html:dist', 'js', 'scss', 'img']
+        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media']
+        //['html:public', 'js', 'scss', 'img']
     );
 });
 
@@ -338,8 +370,7 @@ gulp.task('demo', function() {
 
     runSequence(
         'clean',
-        'themes',
-        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
+        'themes', ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });
 
@@ -347,26 +378,23 @@ gulp.task('dev', function() {
     config.environment = 'dev';
 
     runSequence(
-        'clean',
-        ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
+        'clean', ['plugins', 'html', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });
 
 gulp.task('work', function() {
     runSequence(
-        'dev',
-        ['connect', 'watch']
+        'dev', ['connect', 'watch']
     );
 });
 
 gulp.task('release', function() {
     config.allColors = true;
     config.compress = true;
-    config.environment = 'dist';
+    config.environment = 'public';
 
     runSequence(
         'clean',
-        'themes',
-        ['plugins', 'html:release', 'js', 'scss', 'img', 'fonts', 'media']
+        'themes', ['plugins', 'html:release', 'js', 'scss', 'img', 'fonts', 'media']
     );
 });

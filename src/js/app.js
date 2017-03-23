@@ -1,5 +1,58 @@
-$(document).ready(function(){
-    document.addEventListener("touchstart", function(){}, true);
+// const angular = require('angular');
+var app = angular.module('app', ['ngRoute']);
+
+app.config(["$routeProvider", ($routeProvider) => {
+    $routeProvider.
+    when('', {
+        templateUrl: './../views/index.html',
+        controller: 'DeploymentCtrl'
+    });
+}]);
+
+// app.config(function($stateProvider, $urlRouterProvider) {
+//     $urlRouterProvider.otherwise('/');
+
+//     $stateProvider
+//         .state('normal', {
+//             url: '',
+//             views: {
+//                 "dateWidget@": {
+//                     templateUrl: "templates/normal/dateWidget.html",
+//                     controller: "dateCtrl"
+//                 },
+//                 "stocksWidget@": {
+//                     templateUrl: "templates/normal/stocksWidget.html",
+//                     controller: "stocksCtrl"
+//                 },
+//                 "mainWidget@": {
+//                     templateUrl: "templates/normal/mainWidget.html",
+//                     controller: "mainCtrl"
+//                 }
+//             },
+//             resolve: {
+//                 stocks: ['stockService', function(stockService) {
+//                     return stockService.getStocks();
+//                 }]
+//             }
+//         });
+// .state('normal.portfolio', {
+//   url:'/portfolio',
+//   views: {
+//     "widget@normal": {
+//       templateUrl: "templates/portfolio.html",
+//       controller: "portfolioCtrl"
+//     }
+//   }
+// });
+// });
+
+app.run(function($rootScope) {
+    $rootScope.$on("$stateChangeError", console.log.bind(console));
+});
+// exports.app = app;
+
+$(document).ready(function() {
+    document.addEventListener("touchstart", function() {}, true);
 
     new WOW().init();
 
@@ -18,7 +71,7 @@ $(document).ready(function(){
 
     $('#status').fadeOut(); // will first fade out the loading animation
     $('#ms-preload').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(350).css({'overflow':'visible'});
+    $('body').delay(350).css({ 'overflow': 'visible' });
 
     var slidebar = new $.slidebars();
 
@@ -36,7 +89,7 @@ $(document).ready(function(){
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-        callback: function ( anchor, toggle ) {} // Function to run after scrolling
+        callback: function(anchor, toggle) {} // Function to run after scrolling
     });
 
     var backTop = $('.btn-back-top');
@@ -59,15 +112,15 @@ $(document).ready(function(){
     })(jQuery);
 
     var $container = $('.masonry-container');
-    $container.imagesLoaded( function () {
+    $container.imagesLoaded(function() {
         $container.masonry({
             columnWidth: '.masonry-item',
             itemSelector: '.masonry-item'
         });
     });
 
-    $('.nav').on('click mousedown mouseup touchstart', 'a.has_children', function () {
-        if ( $(this).next('ul').hasClass('open_t') && !$(this).parents('ul').hasClass('open_t')) {
+    $('.nav').on('click mousedown mouseup touchstart', 'a.has_children', function() {
+        if ($(this).next('ul').hasClass('open_t') && !$(this).parents('ul').hasClass('open_t')) {
             $('.open_t').removeClass('open_t');
             return false;
         }
@@ -76,7 +129,7 @@ $(document).ready(function(){
         return false;
     });
     $(document).on('click', ':not(.has_children, .has_children *)', function() {
-        if( $('.open_t').length > 0 ) {
+        if ($('.open_t').length > 0) {
             $('.open_t').removeClass('open_t');
             $('.open_t').parent().removeClass('open');
             return false;
@@ -85,17 +138,16 @@ $(document).ready(function(){
 
     var confOpen = false;
 
-    $(".ms-conf-btn").click(function () {
+    $(".ms-conf-btn").click(function() {
         if (!confOpen) {
             confOpen = true;
             openConf();
-        }
-        else {
+        } else {
             confOpen = false;
             closeConf();
         }
     });
-    $(".sb-site-container").click(function () {
+    $(".sb-site-container").click(function() {
         if (confOpen) {
             confOpen = false;
             closeConf();
@@ -149,11 +201,11 @@ function closeConf() {
 
 
 
-(function ($) {
-  $('.input-number .btn-circle:first-of-type').on('click', function() {
-    $('.input-number input').val( parseInt($('.input-number input').val(), 10) - 1);
-  });
-  $('.input-number .btn-circle:last-of-type').on('click', function() {
-    $('.input-number input').val( parseInt($('.input-number input').val(), 10) + 1);
-  });
+(function($) {
+    $('.input-number .btn-circle:first-of-type').on('click', function() {
+        $('.input-number input').val(parseInt($('.input-number input').val(), 10) - 1);
+    });
+    $('.input-number .btn-circle:last-of-type').on('click', function() {
+        $('.input-number input').val(parseInt($('.input-number input').val(), 10) + 1);
+    });
 })(jQuery);

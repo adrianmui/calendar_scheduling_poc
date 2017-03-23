@@ -1,5 +1,5 @@
 module.exports = {
-    environment : 'dev',
+    environment: 'dev',
     concat: true,
     primaryColor: 'indigo',
     shine: '600',
@@ -9,25 +9,25 @@ module.exports = {
     allColors: false,
     compress: false,
 
-    themes : ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'],
-    shines : ['300', '400', '500', '600', '700', '800'],
+    themes: ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'],
+    shines: ['300', '400', '500', '600', '700', '800'],
 
-    headers : ['header-primary', 'header-dark', 'header-white'],
-    navbars : ['navbar-primary', 'navbar-dark', 'navbar-white'],
+    headers: ['header-primary', 'header-dark', 'header-white'],
+    navbars: ['navbar-primary', 'navbar-dark', 'navbar-white'],
 
-    folders : {
-        dist : 'dist',
+    folders: {
+        // dist : 'dist',
         assets: 'assets',
         plugins: 'plugins',
         public: 'public'
     },
 
-    plugins : {
-        js : [
+    plugins: {
+        js: [
             'bower_components/html5shiv/dist/html5shiv.min.js',
             'bower_components/respond/dest/respond.min.js',
         ],
-        jsConcat : [
+        jsConcat: [
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/jquery.cookie/jquery.cookie.js',
             'bower_components/bootstrap/dist/js/bootstrap.min.js',
@@ -53,7 +53,7 @@ module.exports = {
             'bower_components/typed.js/dist/typed.min.js',
             "bower_components/snackbar/dist/snackbar.min.js"
         ],
-        css : [
+        css: [
             'bower_components/animate.css/animate.min.css',
             'bower_components/bootstrap/dist/css/bootstrap.min.css',
             'bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
@@ -67,12 +67,12 @@ module.exports = {
             'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
             "bower_components/snackbar/dist/snackbar.min.css"
         ],
-        fonts : [
+        fonts: [
             'bower_components/bootstrap/dist/fonts/*',
             'bower_components/font-awesome/fonts/*',
             'bower_components/material-design-iconic-font/dist/fonts/*'
         ],
-        img : [
+        img: [
             'bower_components/owl.carousel/dist/assets/owl.video.play.png'
         ]
     },

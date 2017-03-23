@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,31 +16,37 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- angular1.0--> 
+    <!-- angular1.0-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <!-- ui.router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <!-- angular1.0 components -->
+    <script src='js/app.js'></script>
+    <script src='js/services/deployment.js'></script>
+    <script src='js/services/deploymentInfo.js'></script>
+    <script src='js/controllers/deployments_controller.js'></script>
 
     <!-- build:css:dist,navbar,demo <%=assets%>/css/preload.min.css -->
-        <link rel="stylesheet" href="<%= assets %>/css/preload.css">
+    <link rel="stylesheet" href="<%= assets %>/css/preload.css">
     <!-- /build -->
 
     <!-- build:css <%=assets%>/css/plugins.min.css -->
-        <link rel="stylesheet" href="<%= assets %>/css/animate.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/bootstrap-select.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/font-awesome.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/material-design-iconic-font.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/Slidebars.min.css">
-        <link rel="stylesheet" href="<%= assets %>/css/prism-onedark.css">
+    <link rel="stylesheet" href="<%= assets %>/css/animate.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/Slidebars.min.css">
+    <link rel="stylesheet" href="<%= assets %>/css/prism-onedark.css">
     <!-- /build -->
 
     <!-- build:css:dist,navbar,demo <%=assets%>/css/style.<%=primaryColor%>.min.css -->
-        <link rel="stylesheet" href="<%= assets %>/css/style.themed.css">
+    <link rel="stylesheet" href="<%= assets %>/css/style.themed.css">
     <!-- /build -->
 
 
     <!-- build:remove:dist,navbar,dev -->
-        <link rel="stylesheet" href="<%= assets %>/css/width-boxed.min.css" id="ms-boxed" disabled="">
+    <link rel="stylesheet" href="<%= assets %>/css/width-boxed.min.css" id="ms-boxed" disabled="">
     <!-- /build -->
 
     <!--[if lt IE 9]>
