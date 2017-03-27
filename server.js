@@ -3,6 +3,7 @@ const path = require('path');
 let app = express();
 let $;
 
+// backend virtual dom for jquery
 require("jsdom").env("", function(err, window) {
     if (err) {
         console.error(err);
@@ -18,7 +19,7 @@ app.use(express.static('public/'));
 //routes
 app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname + '/public/views/index.html'));
-    res.sendFile(path.join(__dirname + '/public/html/omail-calendar.html'));
+    res.sendFile(path.join(__dirname + '/public/omail-calendar.html'));
 });
 
 //api

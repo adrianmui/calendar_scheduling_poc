@@ -3,94 +3,15 @@
 
 <div class="material-background"></div>
 
-<div class="container container-full" ng-controller="DeploymentCtrl">
+<div class="container-full">
     <div class="ms-paper">
         <div class="row">
+
             <!-- build:omailMenu component-CAMBIAR.html -->
             <!-- /build -->
 
-            <!-- edit -->
-            <div class="col-md-9 ms-paper-content-container">
-                <div class="ms-paper-content">
-                    <section class="ms-component-section">
-                        <h3 style="margin-top: 0;" class="section-title no-margin-top">Edit Deployment Name</h3>
+            <div ui-view="calendar"></div>
 
-                        <div class="form-group label-floating">
-                            <label class="control-label" for="focusedInput1">Name</label>
-                            <input class="form-control" id="focusedInput1" type="text" value="Test Deployment 1" autofocus>
-                        </div>
-
-                        <div class="form-group label-floating">
-                            <label class="control-label" for="focusedInput2">Deployment Date</label>
-                            <input class="form-control" id="focusedInput2" type="text">
-                        </div>
-
-                        <div class="form-group label-floating">
-                            <label class="control-label" for="focusedInput3">Deployment Time</label>
-                            <input class="form-control" id="focusedInput3" type="text">
-                        </div>
-
-                        <hr>
-
-                        <h3 style="margin-top: 0;" class="section-title no-margin-top">My Deployment Calendar</h3>
-                        <div class="card" style="height: 360px; background-color: #CCC;">
-                            <div class="card-block"> Calendar </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th> TRACK_ID </th>
-                                        <th> STATUS </th>
-                                        <th> DATE </th>
-                                        <th> CreatedBy </th>
-                                        <th> DeploymentName </th>
-                                        <th> DeploymentTypeDescription </th>
-                                        <th> FinalApprover </th>
-                                        <th> SPAM_SCORE </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="t in deployments" ng-click="selectDeployment($event, t.TrackId)">
-                                        <td> {{ t.TrackId }} </td>
-                                        <td> {{ t.Status }} </td>
-                                        <td> {{ t.CreatedDate }} </td>
-                                        <td> {{ t.CreatedBy }} </td>
-                                        <td> {{ t.DeploymentName }} </td>
-                                        <td> {{ t.DeploymentTypeDescription }} </td>
-                                        <td> {{ t.FinalApprover }} </td>
-                                        <td> {{ t.CalculateSpamScore }} </td>
-                                        <tr>
-                                </tbody>
-                            </table>
-
-                            <ul class="list-group" ng-if="deployment">
-                                <li class="list-group-item">
-                                    <span class="badge bg-default">
-                              </span> DeploymentName: <strong> {{deployment.DeploymentName }}</strong>
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="badge bg-primary">
-                                  {{ deployment.TotalOpens }}
-                              </span> Total Opens
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="badge bg-success">
-                                  {{ deployment.TotalUnsubscribe }}
-                              </span> Total Unsubscribe
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="badge bg-danger">
-                                  {{ deployment.CalculateSpamScore }}
-                              </span> Spam Score
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <!-- ms-paper-content -->
-            </div>
-            <!-- col-md-9 -->
         </div>
         <!-- row -->
     </div>

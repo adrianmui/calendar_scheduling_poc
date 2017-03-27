@@ -365,7 +365,7 @@ gulp.task('public', function() {
 
     runSequence(
         'clean',
-        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media', 'babelify']
+        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media']
         //['html:public', 'js', 'scss', 'img']
     );
 });

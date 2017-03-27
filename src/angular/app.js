@@ -3,7 +3,7 @@ const $ = require('jquery');
 
 var app = angular.module('app', [require('angular-ui-router')]);
 
-app.config(($stateProvider, $urlRouterProvider) => {
+app.config(function ($stateProvider, $urlRouterProvider) {
     console.log('adrian1', $stateProvider);
     console.log('adrian2', $urlRouterProvider);
 
@@ -11,11 +11,22 @@ app.config(($stateProvider, $urlRouterProvider) => {
 
     $stateProvider.state('default', {
         url: '',
-        templateUrl: './../html/omail-calendar.html',
-        controller: 'DeploymentCtrl'
+        views: {
+            "calendar@": {
+                templateUrl: "./partials/calendar-view.html",
+                controller: "CalendarCtrl"
+            }
+        }
+    }).state('default.deployment', {
+        url: '/deployment',
+        views: {
+            "wizard@default": {
+                templateUrl: "./partials/deployment-edit.html",
+                controller: "DeploymentCtrl"
+            }
+        }
     });
 });
-
 // app.config(function($stateProvider, $urlRouterProvider) {
 //     $urlRouterProvider.otherwise('/');
 

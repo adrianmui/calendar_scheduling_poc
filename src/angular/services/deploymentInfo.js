@@ -8,7 +8,7 @@ app.factory('DeploymentInfoService', () => {
     
     let _deployment = {};
     
-    stub = {};
+    let stub = {};
 
     stub.getDeploymentInfo = () => {
         return _deployment;
