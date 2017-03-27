@@ -1,7 +1,7 @@
 ### adrian & chris
 # fullstack app with (*)-mail api
 
-## Node/Express + Angular 1.0. As this is a demo/proof of concept we will not be including much overhead.
+## Node/Express + Angular 1.0 w/ ES5/ES6 supp. As this is a demo/proof of concept we will not be including much overhead.
 
 ## Purpose: Demo
 

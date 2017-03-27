@@ -19,7 +19,7 @@ let fullcalendarScript = (deployments) => {
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'listDay,listWeek,month'
+				right: 'basicDay, basicWeek, month, listWeek'
 			},
 			// customize the button names,
 			// otherwise they'd all just say "list"
