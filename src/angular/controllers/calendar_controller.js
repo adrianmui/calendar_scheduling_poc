@@ -27,18 +27,18 @@ let fullcalendarScript = (deployments) => {
 				listDay: { buttonText: 'list day' },
 				listWeek: { buttonText: 'list week' }
 			},
-			defaultView: 'listWeek',
+			defaultView: 'basicWeek',
 			defaultDate: '2017-03-12',
 			navLinks: true, // can click day/week names to navigate views
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
+            contentHeight: 600,
 			events: events
 		});	
 	};
 
 app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService) => {
     console.log('CalendarCtrl');
-
     $scope.deployments = [];
     $scope.deployment;
     $scope.selected;
@@ -48,8 +48,8 @@ app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService
         .then((resp) => {
             console.log('ajaxDeployments done');
             $scope.deployments = DeploymentService.getDeployments();
-            debugger;
             fullcalendarScript($scope.deployments);
+            $scope.daySelector();
             $scope.$apply();
         });
 
@@ -79,5 +79,15 @@ app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService
             }, (err) => {
                 console.log(err.status, err.statusText);
             })
+    };
+
+    // listeners
+    $scope.daySelector = () => {
+        $('.fc-day.fc-widget-content').on('click', ($event)=> { 
+            console.log('ajax call to deployments within single day!');
+            
+            $($event.target).toggleClass('bg-inverse');
+            }    
+        );
     }
 });
