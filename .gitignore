@@ -1,0 +1,15 @@
+.vscode
+.vscode/*
+node_modules
+node_modules/*
+bower_components
+bower_components/*
+etc/*
+data
+data/deployments.json
+data/single
+data/single/*.json
+public/
+public/*
+transpiled/
+transpiled/*

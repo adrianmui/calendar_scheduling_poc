@@ -19,9 +19,12 @@ var runSequence = require('run-sequence').use(gulp);
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var merge = require('merge-stream');
+
+var source = require('vinyl-source-stream');
 var babel = require('gulp-babel');
 var glob = require('glob');
 var browserify = require('browserify');
+var g_browserify = require('gulp-browserify');
 
 var config = require('./gulp/config');
 
@@ -312,22 +315,24 @@ gulp.task('default', function() {
     );
 });
 
-// !ONGOING
 gulp.task('babelify', () => {
-    return gulp.src(["src/js/**.js", "src/js/controllers/**.js", "src/js/services/**.js"])
+    var misc = glob.sync('src/angular/app.js');
+    var services = glob.sync('src/angular/services/**.js');
+    var controllers = glob.sync('src/angular/controllers/**.js');
+    var javascripts = [].concat(misc, services, controllers);
+    console.log('list of javascript file paths: ', javascripts);
+    return gulp.src(javascripts)
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(gulp.dest(path.join(paths.html)))
+        .pipe(concat('bundle.js'))
+        .pipe(gulp.dest('transpiled'))
         .pipe(connect.reload());
 });
 
 // !ONGOING
 gulp.task('browserify', () => {
-    var controllers = glob.sync('src/js/controllers/**.js');
-    var services = glob.sync('src/js/services/**.js');
-    var misc = glob.sync('src/js/**.js');
-    var javascripts = [].concat(controllers, services, misc);
+    var javascripts = glob.sync('transpiled/bundle.js');
     var b = browserify({
         debug: true,
         entries: javascripts,
@@ -335,10 +340,12 @@ gulp.task('browserify', () => {
     });
 
     b.bundle()
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest(path.join(paths.html, 'app.js')))
+        .on('error', (err) => {
+            console.log(err.message);
+            this.emit('end');
+        })
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest("./public/js", { overwrite: false }))
         .pipe(connect.reload());
 
 });
@@ -358,7 +365,7 @@ gulp.task('public', function() {
 
     runSequence(
         'clean',
-        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media']
+        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media', 'babelify']
         //['html:public', 'js', 'scss', 'img']
     );
 });

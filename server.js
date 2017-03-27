@@ -8,7 +8,7 @@ require("jsdom").env("", function(err, window) {
         console.error(err);
         return;
     }
- 
+
     $ = require("jquery")(window);
 });
 
@@ -16,9 +16,9 @@ require("jsdom").env("", function(err, window) {
 app.use(express.static('public/'));
 
 //routes
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
     //res.sendFile(path.join(__dirname + '/public/views/index.html'));
-    res.sendFile(path.join(__dirname + '/dist/omail-calendar.html'));
+    res.sendFile(path.join(__dirname + '/public/html/omail-calendar.html'));
 });
 
 //api
@@ -27,7 +27,7 @@ app.get('/api/deployments', (req, res) => {
 });
 
 app.get('/api/deployment/:depId', (req, res) => {
-    res.sendFile(path.join(__dirname + '/data/single/'+ req.params.depId +'.json'));
+    res.sendFile(path.join(__dirname + '/data/single/' + req.params.depId + '.json'));
 });
- 
+
 app.listen(3000);
