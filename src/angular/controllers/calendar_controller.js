@@ -1,8 +1,42 @@
-// 'use strict';
+import 'fullcalendar';
+import $ from 'jquery';
 
-// let app = require('./../app');
+let fullcalendarScript = (deployments) => {
+    console.log('fullcalendarcript');
+    let events = [];
+    deployments.forEach( (deploy) => {
+        let item = {};
+        item.title = deploy.DeploymentName;
+        item.start = deploy.CreatedDate.replace(' ', 'T');
+        events.push(item);
+    });
 
-app.controller('CalendarCtrl', function($scope, DeploymentService, DeploymentInfoService) {
+    if ($('#calendar').text().length > 0 ) {
+        $('#calendar').empty();
+    }
+
+    $('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'listDay,listWeek,month'
+			},
+			// customize the button names,
+			// otherwise they'd all just say "list"
+			views: {
+				listDay: { buttonText: 'list day' },
+				listWeek: { buttonText: 'list week' }
+			},
+			defaultView: 'listWeek',
+			defaultDate: '2017-03-12',
+			navLinks: true, // can click day/week names to navigate views
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: events
+		});	
+	};
+
+app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService) => {
     console.log('CalendarCtrl');
 
     $scope.deployments = [];
@@ -14,11 +48,14 @@ app.controller('CalendarCtrl', function($scope, DeploymentService, DeploymentInf
         .then((resp) => {
             console.log('ajaxDeployments done');
             $scope.deployments = DeploymentService.getDeployments();
+            debugger;
+            fullcalendarScript($scope.deployments);
             $scope.$apply();
         });
 
+
     // selects and triggers ajax getDepInfo call
-    $scope.selectDeployment = function($event, trackId) {
+    $scope.selectDeployment = ($event, trackId) => {
         var $node = $($event.currentTarget);
 
         if (!$scope.selected) {
@@ -36,10 +73,10 @@ app.controller('CalendarCtrl', function($scope, DeploymentService, DeploymentInf
         $scope.selected.toggleClass('a123').toggleClass('b123').toggleClass('selected');
 
         DeploymentInfoService.$ajaxGetDeploymentInfo(trackId)
-            .then(function(resp) {
+            .then((resp) => {
                 $scope.deployment = DeploymentInfoService.getDeploymentInfo();
                 $scope.$apply();
-            }, function(err) {
+            }, (err) => {
                 console.log(err.status, err.statusText);
             })
     }

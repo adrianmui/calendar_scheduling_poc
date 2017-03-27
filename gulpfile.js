@@ -342,7 +342,6 @@ gulp.task('browserify', () => {
     b.bundle()
         .on('error', (err) => {
             console.log(err.message);
-            this.emit('end');
         })
         .pipe(source('bundle.js'))
         .pipe(gulp.dest("./public/js", { overwrite: false }))
