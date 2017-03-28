@@ -2,7 +2,7 @@
 
 // let app = require('./../app');
 
-app.controller('DeploymentCtrl', function($scope, DeploymentService, DeploymentInfoService) {
+app.controller('DeploymentCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService' ,($scope, DeploymentService, DeploymentInfoService) => {
     console.log('DeploymentCtrl');
 
     $scope.deployments = [];
@@ -43,4 +43,4 @@ app.controller('DeploymentCtrl', function($scope, DeploymentService, DeploymentI
                 console.log(err.status, err.statusText);
             })
     }
-});
+}]);

@@ -1,32 +1,32 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var connect = require('gulp-connect');
-var argv = require('yargs').argv;
-var gulpif = require('gulp-if');
-var jshint = require('gulp-jshint');
-var beautify = require('gulp-beautify');
-var please = require('gulp-pleeease');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
-var sass = require('gulp-sass');
-var sassThemes = require('gulp-sass-themes');
-var uglify = require('gulp-uglify');
-var prettify = require('gulp-prettify');
-var processhtml = require('gulp-processhtml');
-var del = require('del');
-var path = require('path');
-var runSequence = require('run-sequence').use(gulp);
-var imagemin = require('gulp-imagemin');
-var changed = require('gulp-changed');
-var merge = require('merge-stream');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const connect = require('gulp-connect');
+const argv = require('yargs').argv;
+const gulpif = require('gulp-if');
+const jshint = require('gulp-jshint');
+const beautify = require('gulp-beautify');
+const please = require('gulp-pleeease');
+const rename = require('gulp-rename');
+const replace = require('gulp-replace');
+const sass = require('gulp-sass');
+const sassThemes = require('gulp-sass-themes');
+const uglify = require('gulp-uglify');
+const prettify = require('gulp-prettify');
+const processhtml = require('gulp-processhtml');
+const del = require('del');
+const path = require('path');
+const runSequence = require('run-sequence').use(gulp);
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const merge = require('merge-stream');
 
-var source = require('vinyl-source-stream');
-var babel = require('gulp-babel');
-var glob = require('glob');
-var browserify = require('browserify');
-var g_browserify = require('gulp-browserify');
+const source = require('vinyl-source-stream');
+const babel = require('gulp-babel');
+const glob = require('glob');
+const browserify = require('browserify');
+const pump = require('pump');
 
-var config = require('./gulp/config');
+const config = require('./gulp/config');
 
 var paths = {
     public: path.join(config.folders.public),
@@ -330,7 +330,6 @@ gulp.task('babelify', () => {
         .pipe(connect.reload());
 });
 
-// !ONGOING
 gulp.task('browserify', () => {
     var javascripts = glob.sync('transpiled/bundle.js');
     var b = browserify({
@@ -339,7 +338,7 @@ gulp.task('browserify', () => {
         extensions: ['.js']
     });
 
-    b.bundle()
+    return b.bundle()
         .on('error', (err) => {
             console.log(err.message);
         })
@@ -347,6 +346,14 @@ gulp.task('browserify', () => {
         .pipe(gulp.dest("./public/js", { overwrite: false }))
         .pipe(connect.reload());
 
+});
+
+gulp.task('uglify', (cb) => {
+    pump([gulp.src('public/js/bundle.js'), uglify({options: { mangle: false}}), gulp.dest('public/js')], cb);
+})
+
+gulp.task('fe', ()=> {
+    runSequence('babelify', 'browserify', ['uglify']);
 });
 
 gulp.task('public', function() {

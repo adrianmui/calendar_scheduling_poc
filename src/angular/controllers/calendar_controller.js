@@ -37,7 +37,7 @@ let fullcalendarScript = (deployments) => {
 		});	
 	};
 
-app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService) => {
+app.controller('CalendarCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService' ,($scope, DeploymentService, DeploymentInfoService) => {
     console.log('CalendarCtrl');
     $scope.deployments = [];
     $scope.deployment;
@@ -90,4 +90,4 @@ app.controller('CalendarCtrl', ($scope, DeploymentService, DeploymentInfoService
             }    
         );
     }
-});
+}]);

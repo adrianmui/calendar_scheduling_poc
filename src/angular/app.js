@@ -3,7 +3,7 @@ const $ = require('jquery');
 
 var app = angular.module('app', [require('angular-ui-router')]);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
     console.log('adrian1', $stateProvider);
     console.log('adrian2', $urlRouterProvider);
 
@@ -26,7 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     });
-});
+}]);
 // app.config(function($stateProvider, $urlRouterProvider) {
 //     $urlRouterProvider.otherwise('/');
 
@@ -64,6 +64,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 // });
 // });
 
-app.run(function($rootScope) {
+app.run( ($rootScope) => {
     $rootScope.$on("$stateChangeError", console.log.bind(console));
 });

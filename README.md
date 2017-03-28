@@ -15,11 +15,11 @@
 `gulp public --color=indigo --shine=600 --header=ms-header-dark --navbar=ms-navbar-primary --navbarMode=true`
 
 4) This builds all Front End JS and bundles into browser-support javascript
-`gulp babelify && gulp browserify`
+`gulp fe`
 
 or
 
-3+4) `gulp public --color=indigo --shine=600 --header=ms-header-dark --navbar=ms-navbar-primary --navbarMode=true && gulp babelify && gulp browserify`
+3+4) `gulp public --color=indigo --shine=600 --header=ms-header-dark --navbar=ms-navbar-primary --navbarMode=true && gulp fe`
 
 5) Starting server
 `npm start`
