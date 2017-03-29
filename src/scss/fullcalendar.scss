@@ -19,6 +19,13 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 
+/* Adrian add-on */
+.fc-day.fc-widget-content.selected {
+	background: silver;
+	color: white;
+}
+
+
 /* Colors
 --------------------------------------------------------------------------------------------------*/
 

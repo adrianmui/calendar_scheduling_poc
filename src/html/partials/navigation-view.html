@@ -1,1 +1,51 @@
-<!-- tbd -->
+<div class="col-md-3 ms-paper-menu-left-container">
+  <div class="ms-paper-menu-left">
+    <h3 class="ms-paper-menu-title">
+      <i class="zmdi zmdi-apps"></i> Deployment Menu
+      <a role="button" data-toggle="collapse" href="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu" class="withripple">
+        <i class="zmdi zmdi-menu"></i>
+      </a>
+    </h3>
+    <div class="panel-menu collapse" id="collapseMenu">
+      <ul class="panel-group ms-collapse-nav" id="components-nav" role="tablist" aria-multiselectable="true">
+        <li class="panel" role="tab" id="e1">
+          <a role="button" data-toggle="collapse" data-parent="#components-nav" href="#c1" aria-expanded="true" aria-controls="c1"
+            class="collapsed withripple">
+            <i class="fa fa-paper-plane"></i> Create a New Deployment</a>
+          <ul id="c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e1">
+            <li>
+              <a class="withripple" href="component-typography.html">
+                <i class="fa fa-envelope"></i> Regular</a>
+            </li>
+            <li>
+              <a class="withripple" href="component-headers.html">
+                <i class="fa fa-refresh"></i> Recurring</a>
+            </li>
+            <li>
+              <a class="withripple" href="omail-edit.html">
+                <i class="fa fa-child"></i> Edit example</a>
+            </li>
+          </ul>
+        </li>
+        <li class="panel" role="tab" id="e2">
+          <a role="button" data-toggle="collapse" data-parent="#components-nav" href="#c2" aria-expanded="true" aria-controls="c2"
+            class="collapsed withripple">
+            <i class="fa fa-search"></i> Search Deployments</a>
+          <ul id="c2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e2"></ul>
+        </li>
+
+        <li ng-if="true" class="panel" role="tab" id="e3">
+          <ul id="c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e3">
+            <li ng-repeat="dep in queriedDeployments">
+              <a class="withripple" ui-sref="default.deployment({depId: dep.TrackId})">
+                <i class="fa fa-envelope"></i> {{ dep.DeploymentName }}</a>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+      <!-- ms-collapse-nav -->
+    </div>
+  </div>
+</div>
+<!-- col-md-3 -->

@@ -1,8 +1,4 @@
-// 'use strict';
-
-// let app = require('./../app');
-
-app.controller('DeploymentCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService' ,($scope, DeploymentService, DeploymentInfoService) => {
+app.controller('DeploymentCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService', ($scope, DeploymentService, DeploymentInfoService) => {
     console.log('DeploymentCtrl');
 
     $scope.deployments = [];
@@ -18,7 +14,7 @@ app.controller('DeploymentCtrl', ['$scope', 'DeploymentService', 'DeploymentInfo
         });
 
     // selects and triggers ajax getDepInfo call
-    $scope.selectDeployment = function($event, trackId) {
+    $scope.selectDeployment = function ($event, trackId) {
         var $node = $($event.currentTarget);
 
         if (!$scope.selected) {
@@ -36,10 +32,10 @@ app.controller('DeploymentCtrl', ['$scope', 'DeploymentService', 'DeploymentInfo
         $scope.selected.toggleClass('a123').toggleClass('b123').toggleClass('selected');
 
         DeploymentInfoService.$ajaxGetDeploymentInfo(trackId)
-            .then(function(resp) {
+            .then(function (resp) {
                 $scope.deployment = DeploymentInfoService.getDeploymentInfo();
                 $scope.$apply();
-            }, function(err) {
+            }, function (err) {
                 console.log(err.status, err.statusText);
             })
     }

@@ -88,7 +88,7 @@ var targets = {
     },
 };
 
-gulp.task('plugins', function() {
+gulp.task('plugins', function () {
     gulp.src(config.plugins.js)
         .pipe(gulp.dest(paths.js));
 
@@ -108,7 +108,7 @@ gulp.task('plugins', function() {
         .pipe(gulp.dest(paths.img));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
     gulp.src(['src/html/**/*.html', '!src/html/layout/**/*'])
         .pipe(changed(path.join(paths.html)))
         .pipe(processhtml({
@@ -127,7 +127,7 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 
-gulp.task('html:public', function() {
+gulp.task('html:public', function () {
     gulp.src(['src/html/**/*.html', '!src/html/layout/**/*'])
         .pipe(processhtml({
             recursive: true,
@@ -145,7 +145,7 @@ gulp.task('html:public', function() {
         .pipe(connect.reload());
 });
 
-gulp.task('html:release', function() {
+gulp.task('html:release', function () {
     for (var h in config.headers) {
         targets.public.data.headerClass = 'ms-' + config.headers[h];
 
@@ -190,7 +190,7 @@ gulp.task('html:release', function() {
     }
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     gulp.src(['src/js/**/*.js', '!src/js/configurator.js', '!src/js/pages/**/*'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -214,7 +214,7 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('themes', function(cb) {
+gulp.task('themes', function (cb) {
     var out = [];
     for (var color in config.themes) {
         for (var shine in config.shines) {
@@ -246,7 +246,7 @@ function generateNames() {
 }
 
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
     gulp.src('src/scss/**/*.scss')
         .pipe(gulpif(config.allColors, sassThemes('src/scss/themes/_*.scss', generateNames())))
         .pipe(sass().on('error', sass.logError))
@@ -265,33 +265,33 @@ gulp.task('scss', function() {
         .pipe(connect.reload());
 });
 
-gulp.task('img', function() {
+gulp.task('img', function () {
     gulp.src('src/img/**/*')
         .pipe(gulpif(config.compress, imagemin()))
         .pipe(gulp.dest(paths.img))
         .pipe(connect.reload());
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
     gulp.src('src/fonts/**/*')
         .pipe(gulp.dest(paths.fonts))
         .pipe(connect.reload());
 });
 
-gulp.task('media', function() {
+gulp.task('media', function () {
     gulp.src('src/media/**/*')
         .pipe(gulp.dest(paths.media))
         .pipe(connect.reload());
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
     return del.sync([
         paths.public,
         'src/scss/themes/*'
     ]);
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(['src/html/**/*'], ['html']);
     gulp.watch(['src/html/layout/**/*'], ['html:public']);
     gulp.watch(['src/js/**/*'], ['js']);
@@ -301,7 +301,7 @@ gulp.task('watch', function() {
     gulp.watch(['src/media/**/*'], ['media']);
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
     connect.server({
         root: config.folders.public,
         port: 8080,
@@ -309,17 +309,18 @@ gulp.task('connect', function() {
     });
 });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
     runSequence(
         ['connect']
     );
 });
 
 gulp.task('babelify', () => {
-    var misc = glob.sync('src/angular/app.js');
-    var services = glob.sync('src/angular/services/**.js');
-    var controllers = glob.sync('src/angular/controllers/**.js');
-    var javascripts = [].concat(misc, services, controllers);
+    let misc = glob.sync('src/angular/app.js');
+    let misc2 = glob.sync('src/angular/misc/**.js');
+    let services = glob.sync('src/angular/services/**.js');
+    let controllers = glob.sync('src/angular/controllers/**.js');
+    let javascripts = [].concat(misc, misc2, services, controllers);
     console.log('list of javascript file paths: ', javascripts);
     return gulp.src(javascripts)
         .pipe(babel({
@@ -331,8 +332,8 @@ gulp.task('babelify', () => {
 });
 
 gulp.task('browserify', () => {
-    var javascripts = glob.sync('transpiled/bundle.js');
-    var b = browserify({
+    let javascripts = glob.sync('transpiled/bundle.js');
+    let b = browserify({
         debug: true,
         entries: javascripts,
         extensions: ['.js']
@@ -345,18 +346,17 @@ gulp.task('browserify', () => {
         .pipe(source('bundle.js'))
         .pipe(gulp.dest("./public/js", { overwrite: false }))
         .pipe(connect.reload());
-
 });
 
 gulp.task('uglify', (cb) => {
-    pump([gulp.src('public/js/bundle.js'), uglify({options: { mangle: false}}), gulp.dest('public/js')], cb);
+    pump([gulp.src('public/js/bundle.js'), uglify({ options: { mangle: false } }), gulp.dest('public/js')], cb);
 })
 
-gulp.task('fe', ()=> {
-    runSequence('babelify', 'browserify', ['uglify']);
+gulp.task('fe', () => {
+    runSequence('babelify', ['browserify']);//, ['uglify']);
 });
 
-gulp.task('public', function() {
+gulp.task('public', function () {
     config.compress = true;
     config.environment = 'public';
     config.allColors = true;
@@ -371,12 +371,11 @@ gulp.task('public', function() {
 
     runSequence(
         'clean',
-        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media']
-        //['html:public', 'js', 'scss', 'img']
-    );
+        'themes', ['plugins', 'html:public', 'js', 'scss', 'img', 'fonts', 'media']);
+    //['html:public', 'js', 'scss', 'img']
 });
 
-gulp.task('demo', function() {
+gulp.task('demo', function () {
     config.allColors = true;
     config.compress = true;
     config.environment = 'demo';
@@ -387,7 +386,7 @@ gulp.task('demo', function() {
     );
 });
 
-gulp.task('dev', function() {
+gulp.task('dev', function () {
     config.environment = 'dev';
 
     runSequence(
@@ -395,13 +394,13 @@ gulp.task('dev', function() {
     );
 });
 
-gulp.task('work', function() {
+gulp.task('work', function () {
     runSequence(
         'dev', ['connect', 'watch']
     );
 });
 
-gulp.task('release', function() {
+gulp.task('release', function () {
     config.allColors = true;
     config.compress = true;
     config.environment = 'public';

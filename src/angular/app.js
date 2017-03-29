@@ -4,23 +4,24 @@ const $ = require('jquery');
 var app = angular.module('app', [require('angular-ui-router')]);
 
 app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
-    console.log('adrian1', $stateProvider);
-    console.log('adrian2', $urlRouterProvider);
-
     $urlRouterProvider.otherwise("/");
 
     $stateProvider.state('default', {
         url: '',
         views: {
+            "navigation@": {
+                templateUrl: "./partials/navigation-view.html",
+                controller: "NavigationCtrl"
+            },
             "calendar@": {
                 templateUrl: "./partials/calendar-view.html",
                 controller: "CalendarCtrl"
             }
         }
     }).state('default.deployment', {
-        url: '/deployment',
+        url: '/deployment/:depId',
         views: {
-            "wizard@default": {
+            "calendar@default": {
                 templateUrl: "./partials/deployment-edit.html",
                 controller: "DeploymentCtrl"
             }
@@ -64,6 +65,6 @@ app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterP
 // });
 // });
 
-app.run( ($rootScope) => {
+app.run(($rootScope) => {
     $rootScope.$on("$stateChangeError", console.log.bind(console));
 });

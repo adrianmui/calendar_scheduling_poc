@@ -1,43 +1,44 @@
 import 'fullcalendar';
 import $ from 'jquery';
+import _ from 'underscore';
 
 let fullcalendarScript = (deployments) => {
     console.log('fullcalendarcript');
     let events = [];
-    deployments.forEach( (deploy) => {
+    deployments.forEach((deploy) => {
         let item = {};
         item.title = deploy.DeploymentName;
         item.start = deploy.CreatedDate.replace(' ', 'T');
         events.push(item);
     });
 
-    if ($('#calendar').text().length > 0 ) {
+    if ($('#calendar').text().length > 0) {
         $('#calendar').empty();
     }
 
     $('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'basicDay, basicWeek, month, listWeek'
-			},
-			// customize the button names,
-			// otherwise they'd all just say "list"
-			views: {
-				listDay: { buttonText: 'list day' },
-				listWeek: { buttonText: 'list week' }
-			},
-			defaultView: 'basicWeek',
-			defaultDate: '2017-03-12',
-			navLinks: true, // can click day/week names to navigate views
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-            contentHeight: 600,
-			events: events
-		});	
-	};
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'basicDay, basicWeek, month, listWeek'
+        },
+        // customize the button names,
+        // otherwise they'd all just say "list"
+        views: {
+            listDay: { buttonText: 'list day' },
+            listWeek: { buttonText: 'list week' }
+        },
+        defaultView: 'basicWeek',
+        defaultDate: '2017-03-12',
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        contentHeight: 600,
+        events: events
+    });
+};
 
-app.controller('CalendarCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService' ,($scope, DeploymentService, DeploymentInfoService) => {
+app.controller('CalendarCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoService', 'FilterDateService', ($scope, DeploymentService, DeploymentInfoService, FilterDateService) => {
     console.log('CalendarCtrl');
     $scope.deployments = [];
     $scope.deployment;
@@ -83,11 +84,12 @@ app.controller('CalendarCtrl', ['$scope', 'DeploymentService', 'DeploymentInfoSe
 
     // listeners
     $scope.daySelector = () => {
-        $('.fc-day.fc-widget-content').on('click', ($event)=> { 
-            console.log('ajax call to deployments within single day!');
-            
-            $($event.target).toggleClass('bg-inverse');
-            }    
+        $('.fc-day.fc-widget-content').on('click', ($event) => {
+            console.log('daySelector::ajax call to deployments within single day!');
+            let date = $($event.currentTarget).attr('data-date');
+            FilterDateService.setFilteredDate(date);
+            $($event.target).toggleClass('selected');
+        }
         );
     }
 }]);

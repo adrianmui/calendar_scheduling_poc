@@ -1,13 +1,8 @@
-// 'use strict';
-
-// const request = require('request');
-// let app = require('./../app');
-
 app.factory('DeploymentService', () => {
     console.log('DeploymentService');
 
     let _deployments = [];
-    
+
     let stub = {};
 
     stub.getDeployments = () => {
@@ -17,12 +12,12 @@ app.factory('DeploymentService', () => {
 
     stub.$ajaxGetDeployments = () => {
         return $.get("/api/deployments")
-          .done((response) => {
-            _deployments = response.Deployments;
-            _deployments.forEach((deployment) => {
-                console.log(deployment);
+            .done((response) => {
+                _deployments = response.Deployments;
+                _deployments.forEach((deployment) => {
+                    console.log(deployment);
+                });
             });
-          }); 
     };
 
     return stub;
