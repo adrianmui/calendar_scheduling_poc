@@ -35,7 +35,10 @@
         </li>
 
         <li ng-if="true" class="panel" role="tab" id="e3">
-          <ul id="c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e3">
+          <a role="button" data-toggle="collapse" data-parent="#components-nav" href="#c3" aria-expanded="true" aria-controls="c3"
+            class="collapsed withripple">
+            <i class="fa fa-globe"></i> Deployments</a>
+          <ul id="c3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e3">
             <li ng-repeat="dep in queriedDeployments">
               <a class="withripple" ui-sref="default.deployment({depId: dep.TrackId})">
                 <i class="fa fa-envelope"></i> {{ dep.DeploymentName }}</a>

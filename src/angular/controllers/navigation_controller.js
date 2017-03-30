@@ -15,10 +15,11 @@ app.controller('NavigationCtrl', ['$scope', 'DeploymentService', 'FilterDateServ
 
   $scope.$on('date:changed', () => {
     console.log('Date in FilterDateService has been changed');
-    $scope.queriedDeployments = _.filter(DeploymentService.getDeployments(), (obj) => {
-      return obj.CreatedDate.includes(FilterDateService.getFilteredDate());
+    $scope.$evalAsync(() => {
+      $scope.queriedDeployments = _.filter(DeploymentService.getDeployments(), (obj) => {
+        return obj.CreatedDate.includes(FilterDateService.getFilteredDate());
+      });
     });
-    $scope.$apply();
   })
 
 }]);
