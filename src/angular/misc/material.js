@@ -1,5 +1,6 @@
 /* globals jQuery */
-
+'use strict';
+import $ from 'jquery';
 (function ($) {
   // Selector to select only not already processed elements
   $.expr[":"].notmdproc = function (obj) {
@@ -18,8 +19,8 @@
         !evt.ctrlKey &&
         !evt.metaKey &&
         !evt.altKey &&
-        evt.which != 8  && // backspace
-        evt.which != 9  && // tab
+        evt.which != 8 && // backspace
+        evt.which != 9 && // tab
         evt.which != 13 && // enter
         evt.which != 16 && // shift
         evt.which != 17 && // ctrl
@@ -337,4 +338,4 @@
     }
   };
 
-})(jQuery);
+})($);

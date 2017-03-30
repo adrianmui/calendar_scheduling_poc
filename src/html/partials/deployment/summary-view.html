@@ -1,0 +1,76 @@
+<div class="card-block no-pl no-pr">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="summary">
+
+      <div class="form-group label-floating">
+        <label class="control-label" for="focusedInput1">Name</label>
+        <input class="form-control" id="focusedInput1" type="text" value="{{deployment.DeploymentName}}" autofocus>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="focusedInput2">Deployment Date</label>
+            <input class="form-control" value="{{date}}" id="focusedInput2" type="date"> </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="focusedInput3">Deployment Time</label>
+            <input class="form-control" id="focusedInput3" type="time"> </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="campaignId">Campaign ID</label>
+        <input class="form-control" id="campaignId" type="text"> </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="select222" class="control-label">Owner</label>
+            <select id="select222" class="selectpicker form-control">
+                        <option>{{deployment.Owner}}<option>
+                        <option>Chris Mendoza</option>
+                        <option>Adrian Mui</option>
+                        <option>Les Zychowski</option>
+                    </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group" style="margin-top: 28px;">
+            <label class="control-label">&nbsp;</label>
+            <div class="togglebutton">
+              <label>
+                          <input type="checkbox" checked=""> Gets comment &amp; approval emails
+                      </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="audience">
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin cursus ullamcorper erat,
+        nec faucibus libero sollicitudin sit amet. Cras aliquet vel purus a ultrices. Integer commodo diam ac libero fermentum
+        consequat. Donec velit velit, aliquet vel vulputate ut, vehicula ut enim. Curabitur tempus imperdiet pretium. Sed
+        pretium, mi vel imperdiet pharetra, ligula dolor facilisis odio, vel imperdiet lectus justo at ante.</p>
+      <p>Cras sit amet bibendum felis, id auctor arcu. Donec lobortis lorem mi, id vulputate nisl porta id. Duis aliquet rutrum
+        laoreet. Fusce vel libero ante. Sed ornare tincidunt interdum.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aspernatur, suscipit possimus ipsam ab quos eaque
+        sapiente, quo id cumque, mollitia, provident qui voluptate officia cum minus veritatis nulla doloribus laudantium
+        consectetur dolorum ex impedit et error sequi.</p>
+      <p>Tenetur ipsa accusamus, sint soluta totam facilis voluptatem praesentium quia excepturi explicabo dolore autem unde
+        ullam molestiae laborum voluptate in impedit laboriosam nemo dolorem officiis debitis. Nostrum labore fuga numquam
+        facere provident ullam voluptate voluptatibus architecto.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="recipients">
+      <p>Exercitationem saepe dolores eveniet eligendi dolorum molestiae nulla, nesciunt modi aspernatur porro magni dolore
+        perferendis ducimus voluptatibus ipsa.</p>
+      <p>Sit eum iusto in cum fuga consequatur maiores saepe perferendis itaque similique natus, temporibus commodi, repellendus
+        sint aperiam nobis dolorem magnam totam quasi rem modi placeat, laudantium iste unde tenetur veritatis exercitationem
+        vitae quos labore facilis fugiat suscipit consequatur veniam, ab dolorem quidem. Quibusdam deserunt quasi atque.</p>
+    </div>
+  </div>
+</div>

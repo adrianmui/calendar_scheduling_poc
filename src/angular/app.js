@@ -4,67 +4,59 @@ const $ = require('jquery');
 var app = angular.module('app', [require('angular-ui-router')]);
 
 app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('default', {
         url: '',
         views: {
-            "navigation@": {
-                templateUrl: "./partials/navigation-view.html",
-                controller: "NavigationCtrl"
+            'navigation@': {
+                templateUrl: './partials/navigation-view.html',
+                controller: 'NavigationCtrl'
             },
-            "main@": {
-                templateUrl: "./partials/calendar-view.html",
-                controller: "CalendarCtrl"
+            'main@': {
+                templateUrl: './partials/calendar-view.html',
+                controller: 'CalendarCtrl'
             }
         }
     }).state('default.deployment', {
         url: '/deployment/:depId',
         views: {
-            "main@": {
-                templateUrl: "./partials/deployment-edit.html",
-                controller: "DeploymentCtrl"
+            'main@': {
+                templateUrl: './partials/deployment-edit.html',
+                controller: 'DeploymentCtrl'
             }
         }
-    });
+    }).state('default.deployment.summary', {
+        url: '/summary',
+        views: {
+            'wizard@default.deployment': {
+                templateUrl: './partials/deployment/summary-view.html'
+            }
+        }
+    }).state('default.deployment.audience', {
+        url: '/audience',
+        views: {
+            'wizard@default.deployment': {
+                templateUrl: './partials/deployment/audience-view.html'
+            }
+        }
+    }).state('default.deployment.content', {
+        url: '/content',
+        views: {
+            'wizard@default.deployment': {
+                templateUrl: './partials/deployment/content-view.html'
+            }
+        }
+    }).state('default.deployment.other', {
+        url: '/other',
+        views: {
+            'wizard@default.deployment': {
+                templateUrl: './partials/deployment/other-view.html'
+            }
+        }
+    })
 }]);
-// app.config(function($stateProvider, $urlRouterProvider) {
-//     $urlRouterProvider.otherwise('/');
-
-//     $stateProvider
-//         .state('normal', {
-//             url: '',
-//             views: {
-//                 "dateWidget@": {
-//                     templateUrl: "templates/normal/dateWidget.html",
-//                     controller: "dateCtrl"
-//                 },
-//                 "stocksWidget@": {
-//                     templateUrl: "templates/normal/stocksWidget.html",
-//                     controller: "stocksCtrl"
-//                 },
-//                 "mainWidget@": {
-//                     templateUrl: "templates/normal/mainWidget.html",
-//                     controller: "mainCtrl"
-//                 }
-//             },
-//             resolve: {
-//                 stocks: ['stockService', function(stockService) {
-//                     return stockService.getStocks();
-//                 }]
-//             }
-//         });
-// .state('normal.portfolio', {
-//   url:'/portfolio',
-//   views: {
-//     "widget@normal": {
-//       templateUrl: "templates/portfolio.html",
-//       controller: "portfolioCtrl"
-//     }
-//   }
-// });
-// });
 
 app.run(($rootScope) => {
-    $rootScope.$on("$stateChangeError", console.log.bind(console));
+    $rootScope.$on('$stateChangeError', console.log.bind(console));
 });
