@@ -20,21 +20,23 @@ let fullcalendarScript = (deployments) => {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'basicDay, basicWeek, month, listWeek'
+            right: 'basicWeek, month, listWeek'
         },
         // customize the button names,
         // otherwise they'd all just say "list"
         views: {
-            listDay: { buttonText: 'list day' },
-            listWeek: { buttonText: 'list week' }
+            basicWeek: { buttonText: 'Week' },
+            month: { buttonText: 'Month' },
+            listWeek: { buttonText: 'List' }
         },
         defaultView: 'basicWeek',
         defaultDate: '2017-03-12',
         navLinks: true, // can click day/week names to navigate views
         editable: true,
         eventLimit: true, // allow "more" link when too many events
-        contentHeight: 600,
-        events: events
+        contentHeight: 300,
+        events: events,
+        aspectRatio: 1.3
     });
 };
 

@@ -13,7 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterP
                 templateUrl: "./partials/navigation-view.html",
                 controller: "NavigationCtrl"
             },
-            "calendar@": {
+            "main@": {
                 templateUrl: "./partials/calendar-view.html",
                 controller: "CalendarCtrl"
             }
@@ -21,7 +21,7 @@ app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterP
     }).state('default.deployment', {
         url: '/deployment/:depId',
         views: {
-            "calendar@default": {
+            "main@": {
                 templateUrl: "./partials/deployment-edit.html",
                 controller: "DeploymentCtrl"
             }
