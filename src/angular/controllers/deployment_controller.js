@@ -1,8 +1,9 @@
 'use strict';
 
-let convertDate = (mmddyyyy) => {
-    let dateParts = mmddyyyy.split('-');
-    return dateParts[3] + "-" + dateParts[1] + "-" + dateParts[2];
+let convertDate = (yyyymmdd) => {
+    console.log('convertDate: ' + yyyymmdd);
+    let dateParts = yyyymmdd.split('-');
+    return dateParts[0] + "-" + dateParts[1] + "-" + dateParts[2];
 };
 
 app.controller('DeploymentCtrl',
