@@ -1,6 +1,8 @@
 const angular = require('angular');
 const $ = require('jquery');
 
+console.log('app.js Angular starting');
+
 var app = angular.module('app', [require('angular-ui-router')]);
 
 app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
